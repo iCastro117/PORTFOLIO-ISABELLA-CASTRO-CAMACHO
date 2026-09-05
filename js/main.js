@@ -30,11 +30,20 @@ const PROJECT_TAGS = [
   ["photoshop"],
   ["indesign"],
 ];
+// projects with their own case-study page — everything else falls back to
+// the generic Grow placeholder title/link until it gets its own page too
+const PROJECT_PAGES = {
+  0: { title: "Grow, Organic & Healthy Food", link: "project-grow.html" },
+  1: { title: "Plant.io, Indoor Plants for a Better Life", link: "project-plant.html" },
+  2: { title: "Dashboard, Car Sales", link: "project-dashboard.html" },
+  3: { title: "Colombia Canta y Encanta, UX/UI Analysis & Redesign", link: "project-colombia.html" },
+  4: { title: "TechXpress, UX/UI Ecommerce Design", link: "project-techxpress.html" },
+};
 const PROJECTS = PROJECT_TAGS.map((tags, i) => ({
-  title: "Grow, Organic & Healthy Food",
+  title: PROJECT_PAGES[i]?.title ?? "Grow, Organic & Healthy Food",
   sub: "E-commerce Web Site",
   img: `assets/proyectos/proyecto${i + 1}.png`,
-  link: i === 0 ? "project-grow.html" : "#",
+  link: PROJECT_PAGES[i]?.link ?? "#",
   tags,
 }));
 

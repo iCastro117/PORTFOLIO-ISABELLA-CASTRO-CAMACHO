@@ -20,29 +20,52 @@
 
 /* ---------- hero ---------- */
 /* ============================================================
-   ESPACIO entre la tarjeta verde y el bloque de abajo (mockup,
-   título "Grow", descripción, botón) — para agrandarlo o
-   achicarlo, edita estos dos números en píxeles:
+   ESPACIO entre la tarjeta y el bloque de abajo (mockup, título,
+   descripción, botón). Estos son los valores POR DEFECTO (los usa
+   cualquier proyecto nuevo, como Plant.io, hasta que le pongas los
+   suyos propios — ver el bloque "body.theme-plant" más abajo).
 
-     .project-hero   → el segundo valor (300px) es el espacio
-                        DEBAJO de la tarjeta verde.
-     .project-detail → el primer valor (180px) es el espacio
-                        ARRIBA del bloque del mockup/título.
+     .project-hero   → el segundo valor es el espacio DEBAJO de la tarjeta.
+     .project-detail → el primer valor es el espacio ARRIBA del bloque.
 
-   Cuanto más grande hagas la imagen de los computadores (arriba),
-   más va a sobresalir por abajo — así que si la agrandas mucho,
-   puede que necesites subir también estos dos números.
+   Cuanto más grande sea la imagen de los computadores de esa página,
+   más va a sobresalir por abajo — así que si la agrandas mucho, puede
+   que necesites subir también estos dos números (los de SU proyecto,
+   no estos genéricos).
    ============================================================ */
-.project-hero { padding: 1.4rem 0 300px; }
+.project-hero { padding: 1.4rem 0 120px; }
+
+/* ============================================================
+   COLORES DE MARCA por proyecto — cada página de proyecto pone
+   una de estas clases en el <body> (ej: <body class="theme-plant">)
+   y automáticamente colorea la tarjeta verde/oscura, el botón
+   "Ver web" y el cuadradito junto al "01" con esos dos tonos.
+   Así el resto del CSS de abajo es el mismo para todos los
+   proyectos; solo agregas un bloque nuevo aquí para cada uno.
+   ============================================================ */
+body.theme-grow      { --brand-mid: #499B36; --brand-dark: #2B4A20; }
+body.theme-plant     { --brand-mid: #0F693B; --brand-dark: #64B451; }
+body.theme-dashboard { --brand-mid: #B77EF8; --brand-dark: #EE81A7; }
+body.theme-colombia  { --brand-mid: #2c06b5; --brand-dark: #FABF22; }
+body.theme-techxpress { --brand-mid: #FF2D95; --brand-dark: #000000; }
+
 .project-hero-card {
-  --grow-dark: #2B4A20; --grow-green: #499B36; --grow-yellow: #EEC86F;
   position: relative; overflow: visible; isolation: isolate;
   min-height: 420px; border-radius: 30px;
-  background: linear-gradient(135deg, var(--grow-green) 0%, var(--grow-dark) 78%);
+  background: linear-gradient(130deg, var(--brand-mid) 0%, var(--brand-dark) 78%);
   box-shadow: var(--shadow-lg);
   padding: 3.4rem 3rem; color: #fff;
 }
 .project-hero-left { position: relative; z-index: 2; max-width: 48%; }
+
+/* Colombia Canta y Encanta gets its own 3-tone gradient (blue → yellow →
+   cream/white) instead of the plain 2-color one every other project uses.
+   The extra "var(--brand-mid) 48%" stop is what makes the blue hold solid
+   for almost half the card before it starts fading into yellow/cream —
+   raise that number for even more blue, lower it for less. */
+body.theme-colombia .project-hero-card {
+  background: linear-gradient(135deg, var(--brand-mid) 0%, var(--brand-mid) 48%, var(--brand-dark) 82%, #FDF0CE 100%);
+}
 
 /* soft white circles drifting inside the green card — purely decorative,
    sit behind the text and the devices image (both have a higher z-index) */
@@ -75,23 +98,42 @@
   position: absolute; top: -12px; right: 32%; width: 14px; height: 22px;
   background: #fff; border-radius: 0 100% 0 100%; transform: rotate(-25deg); opacity: .9;
 }
+
+/* Plant.io wordmark: round icon badge + name (used only on that page) */
+.plant-logo { display: inline-flex; align-items: center; gap: .8rem; }
+.plant-logo-icon {
+  display: grid; place-items: center; flex: none;
+  width: 52px; height: 52px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, var(--brand-mid), var(--brand-dark));
+  box-shadow: inset 0 2px 4px rgba(255,255,255,.35), 0 6px 14px rgba(0,0,0,.3);
+}
+.plant-logo-icon svg { width: 26px; height: 26px; color: #fff; }
+.plant-logo-name { font-weight: 800; font-size: clamp(1.6rem, 3.4vw, 2.2rem); letter-spacing: -.01em; }
+
+/* Dashboard wordmark: plain bold text, no icon (used only on that page) */
+.dashboard-logo { font-weight: 800; font-size: clamp(2rem, 4.2vw, 2.9rem); letter-spacing: -.01em; }
+
+/* Colombia Canta y Encanta wordmark: the real logo file (used only on that page) */
+.colombia-logo-img { width: 230px; height: auto; }
+
 .project-hero-tag {
   margin: .6rem 0 0; font-size: 1.2rem; font-weight: 500;
   display: block; width: max-content; padding-bottom: .5rem; border-bottom: 2px solid rgba(255,255,255,.7);
 }
 .project-hero-sub { margin: 1.1rem 0 0; font-size: 1.6rem; font-weight: 600; line-height: 1.3; }
-.project-detail { padding: 180px 0 1rem; }
+.project-detail { padding: 60px 0 1rem; }
 
 /* ============================================================
-   IMAGEN DE LOS COMPUTADORES (grow-devices.png) — para moverla o
-   agrandarla, edita estos tres valores, todos en píxeles,
-   en la regla ".hero-devices-slot img" (la de abajo):
+   IMAGEN DE LOS COMPUTADORES (grow-devices.png / plant-devices.png)
+   — para moverla o agrandarla, edita estos tres valores, todos en
+   píxeles, en la regla ".hero-devices-slot img" (la de abajo):
 
      width: ...px   ← más alto = MÁS GRANDE · más bajo = más chica
      top:   ...px   ← más alto = la baja · más bajo (o negativo) = la sube
      right: ...px   ← más alto = la aleja del borde · más bajo (o negativo) = la acerca/mueve a la derecha
 
    (la altura se ajusta sola para no deformar la imagen)
+   Estos son los valores POR DEFECTO — Plant.io los usa por ahora.
 
    El "clip-path" de ".hero-devices-slot" es lo que impide que, sin
    importar el tamaño o si el mouse está encima, se salga de la forma
@@ -103,8 +145,8 @@
   clip-path: inset(0px 0px -700px 0px);
 }
 .hero-devices-slot img {
-  position: absolute; top: -70px; right: -10px;
-  width: 800px; height: auto;
+  position: absolute; top: -40px; right: -10px;
+  width: 600px; height: auto;
   filter: drop-shadow(0 24px 34px rgba(0,0,0,.3));
   transition: transform .45s var(--ease);
 }
@@ -113,6 +155,34 @@
   border: 2px dashed rgba(255,255,255,.55); border-radius: 20px;
   background: rgba(255,255,255,.08); color: #fff;
 }
+
+/* ============================================================
+   AJUSTES PROPIOS DE CADA PROYECTO — el tamaño/posición de SU
+   imagen de computadores y el espacio debajo de SU tarjeta viven
+   acá, en su propio bloque, totalmente independientes entre sí
+   (tocar uno no afecta a los demás). Para el próximo proyecto,
+   copia uno de estos bloques cambiando ".theme-nombre" por el
+   suyo y ajusta los tres números.
+   ============================================================ */
+body.theme-grow .hero-devices-slot img { top: -70px; right: -10px; width: 800px; }
+body.theme-grow .project-hero { padding-bottom: 300px; }
+body.theme-grow .project-detail { padding-top: 180px; }
+
+body.theme-plant .hero-devices-slot img { top: -60px; right: -10px; width: 780px; }
+body.theme-plant .project-hero { padding-bottom: 280px; }
+body.theme-plant .project-detail { padding-top: 160px; }
+
+body.theme-dashboard .hero-devices-slot img { top: -px; right: -10px; width: 800px; }
+body.theme-dashboard .project-hero { padding-bottom: 120px; }
+body.theme-dashboard .project-detail { padding-top: 60px; }
+
+body.theme-colombia .hero-devices-slot img { top: -130px; right: -10px; width: 600px; }
+body.theme-colombia .project-hero { padding-bottom: 120px; }
+body.theme-colombia .project-detail { padding-top: 60px; }
+
+body.theme-techxpress .hero-devices-slot img { top: -60px; right: -80px; width: 730px; }
+body.theme-techxpress .project-hero { padding-bottom: 120px; }
+body.theme-techxpress .project-detail { padding-top: 60px; }
 
 /* ---------- detail ---------- */
 .project-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
@@ -141,14 +211,56 @@
   display: inline-flex; align-items: center; gap: .55rem;
   font-weight: 700; color: var(--text-soft); font-size: .95rem; margin-bottom: .5rem;
 }
-.project-number::before { content: ""; width: 14px; height: 14px; border-radius: 4px; background: #2B4A20; display: inline-block; }
+.project-number::before { content: ""; width: 14px; height: 14px; border-radius: 4px; background: var(--brand-dark); display: inline-block; }
 .project-info h2 { font-size: clamp(1.9rem, 3vw, 2.5rem); margin: 0 0 1rem; }
 .project-desc { color: var(--text-soft); font-size: .96rem; line-height: 1.65; margin: 0 0 1.8rem; }
 .project-info-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.2rem; }
-.btn-green { background: linear-gradient(135deg, #499B36, #2B4A20); color: #fff; box-shadow: 0 8px 22px rgba(43,74,32,.4); }
-.btn-green:hover { box-shadow: 0 14px 30px rgba(43,74,32,.55); }
-.project-figma-badge { display: flex; flex-direction: column; align-items: center; gap: .35rem; font-size: .8rem; font-weight: 600; color: var(--text-soft); }
-.project-figma-badge img { width: 34px; height: 34px; }
+.btn-green { background: linear-gradient(135deg, var(--brand-mid), var(--brand-dark)); color: #fff; box-shadow: 0 8px 22px rgba(0,0,0,.3); }
+.btn-green:hover { box-shadow: 0 14px 30px rgba(0,0,0,.4); }
+/* Colombia's "Ver web" button gets its own blue-to-black gradient
+   instead of the blue-to-yellow it would inherit from --brand-dark */
+body.theme-colombia .btn-green { background: linear-gradient(135deg, var(--brand-mid), #000000); }
+/* Figma + UX badges — more breathing room between them, and both grow
+   with a bright glow on hover (applies to every project page, since
+   this is the shared badge markup all of them reuse) */
+.project-badges { display: flex; align-items: flex-start; gap: 2.6rem; }
+.project-figma-badge, .project-ux-badge {
+  display: flex; flex-direction: column; align-items: center; gap: .4rem;
+  font-size: .8rem; font-weight: 600; color: var(--text-soft);
+  transition: transform .3s var(--ease);
+}
+.project-figma-badge:hover, .project-ux-badge:hover { transform: translateY(-4px) scale(1.1); }
+.project-figma-badge img {
+  width: 44px; height: 44px; border-radius: 10px;
+  transition: box-shadow .3s var(--ease);
+}
+.project-figma-badge:hover img { box-shadow: 0 0 26px 8px rgba(255, 214, 102, .55); }
+
+/* "UX" badge: a real link (unlike the decorative Figma one) with a
+   pulsing ring to draw the eye to it. The ring lives on ::after so its
+   own animated box-shadow doesn't fight with the hover-glow box-shadow
+   on the icon itself (an animation always wins over a plain rule on
+   the same property, which was silently killing the hover glow). */
+.project-ux-icon {
+  position: relative;
+  display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px;
+  background: var(--surface); color: var(--text); box-shadow: var(--shadow-sm);
+  transition: box-shadow .3s var(--ease);
+}
+.project-ux-icon::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  pointer-events: none; animation: uxPulse 2.2s ease-out infinite;
+}
+.project-ux-badge:hover .project-ux-icon { box-shadow: 0 0 26px 8px rgba(255, 214, 102, .55); }
+.project-ux-icon svg { width: 22px; height: 22px; }
+@keyframes uxPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(0,0,0,.28); }
+  70%  { box-shadow: 0 0 0 12px rgba(0,0,0,0); }
+  100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-ux-icon::after { animation: none; }
+}
 
 /* ---------- fonts & colors ---------- */
 .project-palette { padding: 1rem 0 3.5rem; }
@@ -171,6 +283,12 @@
 .font-alphabet--medium { font-weight: 600; }
 .font-alphabet--regular { font-weight: 400; }
 
+/* Dashboard's brand font is Segoe UI, not the site's own Inter — this
+   only re-skins the font sample card on that one page */
+body.theme-dashboard .font-name,
+body.theme-dashboard .font-aa,
+body.theme-dashboard .font-alphabet { font-family: "Segoe UI", Tahoma, Geneva, sans-serif; }
+
 .palette-swatches { display: flex; flex-wrap: wrap; gap: 1rem; }
 .swatch {
   width: 130px; height: 90px; border-radius: 14px; background: var(--sw);
@@ -185,6 +303,10 @@
 @media (max-width: 1024px) {
   .project-hero { padding: 1.4rem 0 1rem; }
   .project-detail { padding: 3.4rem 0 1rem; }
+  /* la imagen se oculta en esta pantalla, así que el espacio extra
+     "propio" de cada proyecto (ver arriba) tampoco hace falta aquí */
+  body.theme-grow .project-hero, body.theme-plant .project-hero, body.theme-dashboard .project-hero, body.theme-colombia .project-hero, body.theme-techxpress .project-hero { padding-bottom: 1rem; }
+  body.theme-grow .project-detail, body.theme-plant .project-detail, body.theme-dashboard .project-detail, body.theme-colombia .project-detail, body.theme-techxpress .project-detail { padding-top: 3.4rem; }
   .project-hero-card { padding: 2.6rem 2rem; }
   .project-hero-left { max-width: 100%; }
   .hero-devices-slot { display: none; }
