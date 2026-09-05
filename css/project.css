@@ -172,17 +172,17 @@ body.theme-plant .hero-devices-slot img { top: -60px; right: -10px; width: 780px
 body.theme-plant .project-hero { padding-bottom: 280px; }
 body.theme-plant .project-detail { padding-top: 160px; }
 
-body.theme-dashboard .hero-devices-slot img { top: -px; right: -10px; width: 800px; }
-body.theme-dashboard .project-hero { padding-bottom: 120px; }
-body.theme-dashboard .project-detail { padding-top: 60px; }
+body.theme-dashboard .hero-devices-slot img { top: -40px; right: -10px; width: 800px; }
+body.theme-dashboard .project-hero { padding-bottom: 220px; }
+body.theme-dashboard .project-detail { padding-top: 160px; }
 
 body.theme-colombia .hero-devices-slot img { top: -130px; right: -10px; width: 600px; }
-body.theme-colombia .project-hero { padding-bottom: 120px; }
-body.theme-colombia .project-detail { padding-top: 60px; }
+body.theme-colombia .project-hero { padding-bottom: 220px; }
+body.theme-colombia .project-detail { padding-top: 160px; }
 
 body.theme-techxpress .hero-devices-slot img { top: -60px; right: -80px; width: 730px; }
-body.theme-techxpress .project-hero { padding-bottom: 120px; }
-body.theme-techxpress .project-detail { padding-top: 60px; }
+body.theme-techxpress .project-hero { padding-bottom: 220px; }
+body.theme-techxpress .project-detail { padding-top: 160px; }
 
 /* ---------- detail ---------- */
 .project-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
@@ -215,6 +215,24 @@ body.theme-techxpress .project-detail { padding-top: 60px; }
 .project-info h2 { font-size: clamp(1.9rem, 3vw, 2.5rem); margin: 0 0 1rem; }
 .project-desc { color: var(--text-soft); font-size: .96rem; line-height: 1.65; margin: 0 0 1.8rem; }
 .project-info-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.2rem; }
+
+/* a badges row that stands on its own below "Ver web" (used when a page
+   lists its tech stack alongside Figma/UI/Problem, e.g. Colombia) instead
+   of sharing the row with the button — same badge size/hover as always */
+.project-badges--full { margin-top: 1.6rem; row-gap: 1.6rem; }
+
+/* Dashboard, Colombia and TechXpress get extra breathing room in this
+   section — more gap between the mockup and the title/description/button
+   column, and a bit more space between the title and the description */
+body.theme-dashboard .project-detail-grid,
+body.theme-colombia .project-detail-grid,
+body.theme-techxpress .project-detail-grid { gap: 9rem; }
+body.theme-dashboard .project-info h2,
+body.theme-colombia .project-info h2,
+body.theme-techxpress .project-info h2 { margin-bottom: 1.4rem; }
+body.theme-dashboard .project-desc,
+body.theme-colombia .project-desc,
+body.theme-techxpress .project-desc { margin-bottom: 2.4rem; }
 .btn-green { background: linear-gradient(135deg, var(--brand-mid), var(--brand-dark)); color: #fff; box-shadow: 0 8px 22px rgba(0,0,0,.3); }
 .btn-green:hover { box-shadow: 0 14px 30px rgba(0,0,0,.4); }
 /* Colombia's "Ver web" button gets its own blue-to-black gradient
@@ -223,7 +241,7 @@ body.theme-colombia .btn-green { background: linear-gradient(135deg, var(--brand
 /* Figma + UX badges — more breathing room between them, and both grow
    with a bright glow on hover (applies to every project page, since
    this is the shared badge markup all of them reuse) */
-.project-badges { display: flex; align-items: flex-start; gap: 2.6rem; }
+.project-badges { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2.6rem; }
 .project-figma-badge, .project-ux-badge {
   display: flex; flex-direction: column; align-items: center; gap: .4rem;
   font-size: .8rem; font-weight: 600; color: var(--text-soft);
@@ -311,6 +329,9 @@ body.theme-dashboard .font-alphabet { font-family: "Segoe UI", Tahoma, Geneva, s
   .project-hero-left { max-width: 100%; }
   .hero-devices-slot { display: none; }
   .project-detail-grid { grid-template-columns: 1fr; gap: 1.6rem; }
+  body.theme-dashboard .project-detail-grid,
+  body.theme-colombia .project-detail-grid,
+  body.theme-techxpress .project-detail-grid { gap: 1.6rem; }
   .palette-fonts { grid-template-columns: 1fr; }
 }
 @media (max-width: 460px) {
