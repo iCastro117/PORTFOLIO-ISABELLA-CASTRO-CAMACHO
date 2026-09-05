@@ -34,7 +34,7 @@ const PROJECTS = PROJECT_TAGS.map((tags, i) => ({
   title: "Grow, Organic & Healthy Food",
   sub: "E-commerce Web Site",
   img: `assets/proyectos/proyecto${i + 1}.png`,
-  link: "#",
+  link: i === 0 ? "project-grow.html" : "#",
   tags,
 }));
 
@@ -217,17 +217,17 @@ const extIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stro
 function renderProjects() {
   const start = (page - 1) * PER_PAGE;
   grid.innerHTML = PROJECTS.slice(start, start + PER_PAGE).map((p) => `
-    <article class="project">
+    <a class="project" href="${p.link}" target="_blank" rel="noopener" aria-label="Open ${p.title}">
       <div class="project-img"><img src="${p.img}" alt="${p.title}" loading="lazy"></div>
       <div class="project-body">
         <div class="project-head">
           <span class="project-title">${p.title}</span>
-          <a href="${p.link}" target="_blank" rel="noopener" aria-label="Open project">${extIcon}</a>
+          <span class="project-head-icon">${extIcon}</span>
         </div>
         <p class="project-sub">${p.sub}</p>
         <span class="project-tags">${p.tags.map((t) => `<img src="${TOOL(t)}" alt="${t}" title="${t}">`).join("")}</span>
       </div>
-    </article>`).join("");
+    </a>`).join("");
 
   const pages = Math.ceil(PROJECTS.length / PER_PAGE);
   pag.innerHTML = Array.from({ length: pages }, (_, i) => `<button class="${i + 1 === page ? "active" : ""}" data-page="${i + 1}">${i + 1}</button>`).join("");
