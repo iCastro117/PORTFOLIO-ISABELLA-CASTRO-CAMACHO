@@ -81,18 +81,26 @@ $$(".img-slot img").forEach((img) => {
   if (img.complete && img.naturalWidth === 0) markEmpty();
 });
 
-/* ---------- Mockup image: spin 360° + bounce on click (hover does it via CSS) ---------- */
+/* ---------- Mockup image: one 360° spin + bounce, on hover-enter or click ----------
+   Triggered from JS (not CSS :hover) and guarded by `spinning`, because the
+   rotateY transform changes the element's painted shape as it turns, which
+   can make the cursor drift in and out of its hit-area and re-trigger a
+   plain :hover animation several times in a row instead of playing once. */
 const mockupImg = $(".project-mockup img");
 if (mockupImg) {
-  mockupImg.addEventListener("animationend", (e) => {
-    if (e.animationName === "mockupSpin") mockupImg.classList.remove("spin-once");
-  });
-  mockupImg.addEventListener("click", () => {
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    mockupImg.classList.remove("spin-once");
-    void mockupImg.offsetWidth;         // force reflow so the animation can replay
+  let spinning = false;
+  const triggerSpin = () => {
+    if (spinning || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    spinning = true;
     mockupImg.classList.add("spin-once");
+  };
+  mockupImg.addEventListener("animationend", (e) => {
+    if (e.animationName !== "mockupSpin") return;
+    mockupImg.classList.remove("spin-once");
+    spinning = false;
   });
+  mockupImg.addEventListener("mouseenter", triggerSpin);
+  mockupImg.addEventListener("click", triggerSpin);
 }
 
 /* ---------- Scroll reveal ---------- */
