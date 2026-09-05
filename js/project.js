@@ -80,3 +80,52 @@ $$(".img-slot img").forEach((img) => {
   img.addEventListener("error", markEmpty);
   if (img.complete && img.naturalWidth === 0) markEmpty();
 });
+
+/* ---------- Mockup image: spin 360° + bounce on click (hover does it via CSS) ---------- */
+const mockupImg = $(".project-mockup img");
+if (mockupImg) {
+  mockupImg.addEventListener("animationend", (e) => {
+    if (e.animationName === "mockupSpin") mockupImg.classList.remove("spin-once");
+  });
+  mockupImg.addEventListener("click", () => {
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    mockupImg.classList.remove("spin-once");
+    void mockupImg.offsetWidth;         // force reflow so the animation can replay
+    mockupImg.classList.add("spin-once");
+  });
+}
+
+/* ---------- Scroll reveal ---------- */
+const REVEAL = ".project-hero-card, .project-mockup, .project-info, h2, .font-card, .swatch, .contact-card";
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach((en) => {
+    if (!en.isIntersecting) return;
+    en.target.classList.add("in-view");
+    revealObs.unobserve(en.target);
+  });
+}, { threshold: .1, rootMargin: "0px 0px -6% 0px" });
+$$(REVEAL).forEach((el, i) => {
+  el.setAttribute("data-reveal", "");
+  el.style.setProperty("--reveal-i", i % 8);
+  revealObs.observe(el);
+});
+
+/* ---------- Click ripples ---------- */
+const rippleLayer = document.createElement("div");
+rippleLayer.id = "ripples";
+document.body.prepend(rippleLayer);
+
+const RIPPLE_TONES = ["#3f6fb5", "#5a8bd6", "#8fb4ee", "#2f5a98", "#7ea6e6"];
+const NO_RIPPLE = "a, button, input, textarea, select, label";
+
+document.addEventListener("click", (e) => {
+  if (e.target.closest(NO_RIPPLE)) return;          // let real controls do their job
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const r = document.createElement("span");
+  r.className = "ripple";
+  r.style.left = `${e.clientX}px`;
+  r.style.top = `${e.clientY}px`;
+  r.style.setProperty("--tone", RIPPLE_TONES[Math.floor(Math.random() * RIPPLE_TONES.length)]);
+  r.addEventListener("animationend", () => r.remove());
+  rippleLayer.appendChild(r);
+});
