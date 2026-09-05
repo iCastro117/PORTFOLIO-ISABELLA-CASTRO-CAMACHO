@@ -6,6 +6,9 @@
 const TOOL = (name) => name === "wix" ? "assets/proyectos/wix.png" : `assets/tools/${name}.svg`;
 
 // 22 projects → 4 pages of 6. Tools per project are the real stack of each one.
+// Projects 8/9/10 and 13/14/15 were swapped (with their thumbnail images in
+// assets/proyectos/) per request; then Psychological Monitor (originally
+// #13) moved #8 → #11 → #13, swapping each time with whatever was there.
 const PROJECT_TAGS = [
   ["figma"],
   ["figma"],
@@ -14,14 +17,14 @@ const PROJECT_TAGS = [
   ["figma"],
   ["wix"],
   ["figma"],
-  ["java"],
-  ["java"],
-  ["java"],
-  ["java"],
-  ["java"],
   ["figma", "java", "springboot", "postgresql", "html", "css", "javascript", "docker"],
   ["figma", "nodejs", "postgresql", "javascript", "brevo", "railway", "html", "css", "java"],
-  ["sql"],
+  ["sql", "java"],
+  ["java"],
+  ["java"],
+  ["java"],
+  ["java"],
+  ["java"],
   ["illustrator"],
   ["illustrator"],
   ["illustrator"],
@@ -39,6 +42,10 @@ const PROJECT_PAGES = {
   3: { title: "Colombia Canta y Encanta, UX/UI Analysis & Redesign", link: "project-colombia.html" },
   4: { title: "TechXpress, UX/UI Ecommerce Design", link: "project-techxpress.html" },
   5: { title: "Coffee Tour, A coffee experience in Chapinero, Bogotá", link: "project-coffeetour.html" },
+  6: { title: "ExpoKonrad, Expo Konrad corporate website", link: "project-expokonrad.html" },
+  7: { title: "Psychological Monitor, USAR-COL 13", link: "project-psychmonitor.html" },
+  8: { title: "USS Sello Editorial, University Book Publishing & Sales Platform", link: "project-usssello.html" },
+  9: { title: "Literary Manager, Relational Database Design", link: "project-literarydb.html" },
 };
 const PROJECTS = PROJECT_TAGS.map((tags, i) => ({
   title: PROJECT_PAGES[i]?.title ?? "Grow, Organic & Healthy Food",

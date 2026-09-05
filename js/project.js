@@ -28,6 +28,17 @@ const I18N = {
     "techxpress.desc": "This project is a UX/UI design for “TechXpress”, a fictitious e-commerce platform specializing in tech components and gaming peripherals.<br><br>The design uses a bold dark theme with vivid pink accents to appeal to a tech-savvy audience, featuring clear product categories, secure checkout messaging, and a dedicated support section.",
     "coffeetour.tag": "A coffee experience in Chapinero, Bogotá",
     "coffeetour.desc": "This project is an original website designed in Wix that highlights a coffee tour in Chapinero, Bogotá, Colombia.<br><br>The website is focused on providing an immersive experience to users, integrating interactive elements such as audios that describe the tour, photos that capture the essence of the coffee shops and the vibe of the neighborhood, and a detailed review of the four coffee shops visited.",
+    "expokonrad.tag": "Expo Konrad corporate website",
+    "expokonrad.desc": "The website belongs to an international logistics company called Expo Konrad, which offers export, import, customs clearance, warehousing, and transportation services with real-time digital tracking.<br><br>Its UI design uses a blue corporate color palette, modular cards, icons, and badges to organize the information.",
+    "psychmonitor.tag": "USAR-COL 13",
+    "psychmonitor.desc": "A web application that digitizes psychological risk assessment for USAR COL-13 rescue personnel through a 23-question survey with automated color-coded risk scoring.<br><br>Built with Java Spring Boot and PostgreSQL on the backend, HTML, CSS, and JavaScript on the frontend, email alerts via Spring Mail, and Docker for deployment.",
+    "project.videoTitle": "Video Demo",
+    "project.watchOnYoutube": "Watch on YouTube",
+    "usssello.tag": "University Book Publishing & Sales Platform",
+    "usssello.desc": "A full-stack web platform for managing and selling university publications, featuring a catalog with dynamic filters, shopping cart and checkout flow, blog/review system, and an admin dashboard with sales analytics.<br><br>Built with Node.js and Express on the backend, PostgreSQL (Neon) as the database, HTML, CSS, and JavaScript on the frontend, Brevo for email integration, and deployed on Railway.",
+    "usssello.srs": "SRS",
+    "literarydb.tag": "Relational Database Design",
+    "literarydb.desc": "This project consisted of the design and implementation of a relational database in MySQL, integrated with a NetBeans application using Java.<br><br>The system allows managing information on authors, publishers and books, establishing relationships between these entities to perform queries such as books written by a specific author and publishers responsible for each publication.",
   },
   es: {
     "nav.home": "Inicio", "nav.about": "Sobre mí", "nav.tools": "Herramientas", "nav.projects": "Proyectos", "nav.background": "Trayectoria",
@@ -51,6 +62,17 @@ const I18N = {
     "techxpress.desc": "Este proyecto es un diseño UX/UI para “TechXpress”, una plataforma de ecommerce ficticia especializada en componentes tecnológicos y periféricos gaming.<br><br>El diseño usa un tema oscuro y llamativo con acentos rosa vibrante para atraer a un público tecnológico, con categorías de producto claras, mensajes de pago seguro y una sección dedicada a soporte.",
     "coffeetour.tag": "Una experiencia cafetera en Chapinero, Bogotá",
     "coffeetour.desc": "Este proyecto es un sitio web original diseñado en Wix que destaca un recorrido cafetero en Chapinero, Bogotá, Colombia.<br><br>El sitio está enfocado en brindar una experiencia inmersiva a los usuarios, integrando elementos interactivos como audios que describen el recorrido, fotos que capturan la esencia de las cafeterías y el ambiente del barrio, y una reseña detallada de las cuatro cafeterías visitadas.",
+    "expokonrad.tag": "Sitio web corporativo de Expo Konrad",
+    "expokonrad.desc": "El sitio web pertenece a una empresa de logística internacional llamada Expo Konrad, que ofrece servicios de exportación, importación, despacho aduanero, almacenamiento y transporte con seguimiento digital en tiempo real.<br><br>Su diseño de interfaz usa una paleta de colores corporativa azul, tarjetas modulares, íconos y badges para organizar la información.",
+    "psychmonitor.tag": "USAR-COL 13",
+    "psychmonitor.desc": "Una aplicación web que digitaliza la evaluación de riesgo psicológico para el personal de rescate USAR COL-13 mediante una encuesta de 23 preguntas con puntuación de riesgo codificada por colores de forma automática.<br><br>Construida con Java Spring Boot y PostgreSQL en el backend, HTML, CSS y JavaScript en el frontend, alertas por correo vía Spring Mail, y Docker para el despliegue.",
+    "project.videoTitle": "Video de Demostración",
+    "project.watchOnYoutube": "Ver en YouTube",
+    "usssello.tag": "Plataforma de Publicación y Venta de Libros Universitarios",
+    "usssello.desc": "Una plataforma web full-stack para gestionar y vender publicaciones universitarias, con un catálogo con filtros dinámicos, carrito de compras y flujo de pago, sistema de blog/reseñas, y un panel de administración con analíticas de ventas.<br><br>Construida con Node.js y Express en el backend, PostgreSQL (Neon) como base de datos, HTML, CSS y JavaScript en el frontend, Brevo para integración de correo, y desplegada en Railway.",
+    "usssello.srs": "SRS",
+    "literarydb.tag": "Diseño de Base de Datos Relacional",
+    "literarydb.desc": "Este proyecto consistió en el diseño e implementación de una base de datos relacional en MySQL, integrada con una aplicación en NetBeans usando Java.<br><br>El sistema permite gestionar información de autores, editoriales y libros, estableciendo relaciones entre estas entidades para realizar consultas como los libros escritos por un autor específico y las editoriales responsables de cada publicación.",
   },
 };
 
@@ -128,7 +150,7 @@ if (mockupImg) {
 }
 
 /* ---------- Scroll reveal ---------- */
-const REVEAL = ".project-hero-card, .project-mockup, .project-info, h2, .font-card, .swatch, .contact-card";
+const REVEAL = ".project-hero-card, .project-mockup, .project-info, h2, .font-card, .swatch, .contact-card, .project-video-frame";
 const revealObs = new IntersectionObserver((entries) => {
   entries.forEach((en) => {
     if (!en.isIntersecting) return;

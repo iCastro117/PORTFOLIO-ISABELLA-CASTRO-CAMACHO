@@ -49,6 +49,10 @@ body.theme-dashboard { --brand-mid: #B77EF8; --brand-dark: #EE81A7; }
 body.theme-colombia  { --brand-mid: #2c06b5; --brand-dark: #FABF22; }
 body.theme-techxpress { --brand-mid: #FF2D95; --brand-dark: #000000; }
 body.theme-coffeetour { --brand-mid: #F9C85F; --brand-dark: #935603; }
+body.theme-expokonrad { --brand-mid: #326bf3; --brand-dark: #0f1a2e; }
+body.theme-psychmonitor { --brand-mid: #2F5FA8; --brand-dark: #12263F; }
+body.theme-usssello { --brand-mid: #2E8B57; --brand-dark: #123D25; }
+body.theme-literarydb { --brand-mid: #3FA796; --brand-dark: #1F6F63; }
 
 .project-hero-card {
   position: relative; overflow: visible; isolation: isolate;
@@ -126,6 +130,9 @@ body.theme-coffeetour .project-number::before { background: var(--brand-mid); }
 /* Colombia Canta y Encanta wordmark: the real logo file (used only on that page) */
 .colombia-logo-img { width: 230px; height: auto; }
 
+/* USS Sello Editorial wordmark: the real logo file (used only on that page) */
+.usssello-logo-img { width: 210px; height: auto; }
+
 .project-hero-tag {
   margin: .6rem 0 0; font-size: 1.2rem; font-weight: 500;
   display: block; width: max-content; padding-bottom: .5rem; border-bottom: 2px solid rgba(255,255,255,.7);
@@ -167,6 +174,49 @@ body.theme-coffeetour .project-number::before { background: var(--brand-mid); }
 }
 
 /* ============================================================
+   DISEÑO DE HERO "V2" — usado desde el proyecto 10 en adelante.
+   Tarjeta clara (no el degradado de color de fondo), texto a la
+   izquierda, y a la derecha la imagen del proyecto flotando sobre
+   una "mancha" con el degradado propio de cada proyecto (en vez
+   de los computadores saliéndose de la tarjeta por abajo).
+
+   Para usarlo en un proyecto nuevo: agrega la clase "hero-v2" a
+   ".project-hero-card" en su HTML. El tamaño/posición de la imagen
+   ya vienen resueltos acá mismo — normalmente NO hace falta un
+   bloque "AJUSTES PROPIOS" para estos proyectos.
+   ============================================================ */
+.project-hero-card.hero-v2 {
+  background: var(--surface);
+  color: var(--text);
+  display: flex; align-items: center; gap: 2rem;
+}
+.project-hero-card.hero-v2 .hero-circle { display: none; }
+.project-hero-card.hero-v2 .project-hero-tag { border-bottom-color: rgba(0,0,0,.15); color: var(--text-soft); }
+[data-theme="dark"] .project-hero-card.hero-v2 .project-hero-tag { border-bottom-color: rgba(255,255,255,.2); }
+.project-hero-card.hero-v2 .dashboard-logo { color: var(--text); }
+
+.hero-v2 .hero-devices-slot {
+  position: relative; inset: auto; z-index: 1; clip-path: none;
+  flex: 1 1 46%; min-height: 320px;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-v2 .hero-devices-slot::before {
+  content: ""; position: absolute; inset: 4% 4%;
+  border-radius: 44% 56% 61% 39% / 49% 44% 56% 51%;
+  background: linear-gradient(135deg, var(--brand-mid), var(--brand-dark));
+  z-index: 0;
+}
+.hero-v2 .hero-devices-slot img {
+  position: relative; top: auto; right: auto; z-index: 1;
+  width: 84%; height: auto; margin: 0 auto;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,.25));
+}
+.hero-v2 .hero-devices-slot.is-empty {
+  border: none; background: none; color: var(--text-soft);
+}
+.hero-v2 .hero-devices-slot.is-empty::before { opacity: .35; }
+
+/* ============================================================
    AJUSTES PROPIOS DE CADA PROYECTO — el tamaño/posición de SU
    imagen de computadores y el espacio debajo de SU tarjeta viven
    acá, en su propio bloque, totalmente independientes entre sí
@@ -197,6 +247,18 @@ body.theme-techxpress .project-detail { padding-top: 160px; }
 body.theme-coffeetour .hero-devices-slot img { top: -60px; right: -100px; width: 800px; }
 body.theme-coffeetour .project-hero { padding-bottom: 220px; }
 body.theme-coffeetour .project-detail { padding-top: 160px; }
+
+body.theme-expokonrad .hero-devices-slot img { top: -40px; right: -70px; width: 730px; }
+body.theme-expokonrad .project-hero { padding-bottom: 220px; }
+body.theme-expokonrad .project-detail { padding-top: 160px; }
+
+body.theme-psychmonitor .hero-devices-slot img { top: -60px; right: -70px; width:770px; }
+body.theme-psychmonitor .project-hero { padding-bottom: 220px; }
+body.theme-psychmonitor .project-detail { padding-top: 160px; }
+
+body.theme-usssello .hero-devices-slot img { top: -60px; right: -70px; width: 750px; }
+body.theme-usssello .project-hero { padding-bottom: 220px; }
+body.theme-usssello .project-detail { padding-top: 160px; }
 
 /* ---------- detail ---------- */
 .project-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
@@ -267,6 +329,22 @@ body.theme-colombia .btn-green { background: linear-gradient(135deg, var(--brand
   transition: box-shadow .3s var(--ease);
 }
 .project-figma-badge:hover img { box-shadow: 0 0 26px 8px rgba(255, 214, 102, .55); }
+/* the GitHub mark is drawn white (fill="#ffffff") inside its own svg, so
+   it's invisible on the light theme's light background — invert it there
+   (white → black) and leave it alone in dark mode, where it's already
+   the right color for the dark background. */
+.project-figma-badge img[src$="github.svg"] { filter: invert(1); }
+[data-theme="dark"] .project-figma-badge img[src$="github.svg"] { filter: none; }
+
+/* modifier for a clickable badge that should pulse to draw the eye to it
+   (e.g. a GitHub link standing in for a "view site" button) — same ring
+   as the UX/UI pulse, just centered over this badge's icon instead */
+.project-figma-badge--pulse { position: relative; }
+.project-figma-badge--pulse::after {
+  content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 44px; height: 44px; border-radius: 10px;
+  pointer-events: none; animation: uxPulse 2.2s ease-out infinite;
+}
 
 /* the Wix wordmark is much wider than tall — stretching it into the
    same 44×44 square as the other (roughly square) tool icons distorted
@@ -298,7 +376,37 @@ body.theme-coffeetour .project-figma-badge img {
   100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .project-ux-icon::after { animation: none; }
+  .project-ux-icon::after, .project-figma-badge--pulse::after { animation: none; }
+}
+
+/* ---------- video demo (only on pages that have one) ---------- */
+/* When the video allows embedding, use an <iframe src=".../embed/ID">
+   inside .project-video-frame instead — same class handles both. */
+.project-video { padding: 1rem 0 3.5rem; }
+.project-video-frame {
+  position: relative; display: block; width: 100%; aspect-ratio: 16 / 9;
+  border-radius: 22px; overflow: hidden; box-shadow: var(--shadow-lg);
+  background: #000;
+}
+.project-video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.project-video-frame img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  transition: transform .4s var(--ease), filter .4s;
+}
+.project-video-frame:hover img { transform: scale(1.05); filter: brightness(.72); }
+.project-video-play {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  width: 88px; height: 88px; margin: auto; border-radius: 50%;
+  background: rgba(224, 30, 41, .92); box-shadow: 0 12px 32px rgba(0,0,0,.45);
+  transition: transform .3s var(--ease);
+}
+.project-video-frame:hover .project-video-play { transform: scale(1.12); }
+.project-video-play svg { width: 34px; height: 34px; color: #fff; margin-left: 4px; }
+.project-video-label {
+  position: absolute; left: 1.2rem; bottom: 1.2rem;
+  display: inline-flex; align-items: center; gap: .4rem;
+  padding: .5rem 1rem; border-radius: 999px; font-weight: 600; font-size: .85rem;
+  background: rgba(0,0,0,.55); color: #fff; backdrop-filter: blur(6px);
 }
 
 /* ---------- fonts & colors ---------- */
@@ -344,8 +452,8 @@ body.theme-dashboard .font-alphabet { font-family: "Segoe UI", Tahoma, Geneva, s
   .project-detail { padding: 3.4rem 0 1rem; }
   /* la imagen se oculta en esta pantalla, así que el espacio extra
      "propio" de cada proyecto (ver arriba) tampoco hace falta aquí */
-  body.theme-grow .project-hero, body.theme-plant .project-hero, body.theme-dashboard .project-hero, body.theme-colombia .project-hero, body.theme-techxpress .project-hero, body.theme-coffeetour .project-hero { padding-bottom: 1rem; }
-  body.theme-grow .project-detail, body.theme-plant .project-detail, body.theme-dashboard .project-detail, body.theme-colombia .project-detail, body.theme-techxpress .project-detail, body.theme-coffeetour .project-detail { padding-top: 3.4rem; }
+  body.theme-grow .project-hero, body.theme-plant .project-hero, body.theme-dashboard .project-hero, body.theme-colombia .project-hero, body.theme-techxpress .project-hero, body.theme-coffeetour .project-hero, body.theme-expokonrad .project-hero, body.theme-psychmonitor .project-hero, body.theme-usssello .project-hero { padding-bottom: 1rem; }
+  body.theme-grow .project-detail, body.theme-plant .project-detail, body.theme-dashboard .project-detail, body.theme-colombia .project-detail, body.theme-techxpress .project-detail, body.theme-coffeetour .project-detail, body.theme-expokonrad .project-detail, body.theme-psychmonitor .project-detail, body.theme-usssello .project-detail { padding-top: 3.4rem; }
   .project-hero-card { padding: 2.6rem 2rem; }
   .project-hero-left { max-width: 100%; }
   .hero-devices-slot { display: none; }

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExpoKonrad · Isabella Castro Camacho</title>
+  <meta name="description" content="ExpoKonrad — corporate website for an international logistics company, a project by Isabella Castro Camacho.">
+  <link rel="icon" href="assets/yo/isabella-cara.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/project.css">
+</head>
+<body id="top" class="theme-expokonrad">
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav-wrap">
+    <nav class="nav glass" aria-label="Main navigation">
+      <a href="index.html" class="brand">
+        <img src="assets/yo/isabella-cara.png" alt="Isabella Castro" class="brand-avatar">
+        <span>Portfolio</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#home" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About Me</a></li>
+        <li><a href="index.html#tools" data-i18n="nav.tools">Tools &amp; Skills</a></li>
+        <li><a href="index.html#projects" class="active" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="index.html#background" data-i18n="nav.background">Background</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="langBtn" aria-label="Change language" title="EN / ES">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
+        </button>
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode" title="Light / Dark">
+          <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ PROJECT HERO ============ -->
+    <section class="project-hero">
+      <div class="container">
+        <div class="project-hero-card">
+          <span class="hero-circle hero-circle-1" aria-hidden="true"></span>
+          <span class="hero-circle hero-circle-2" aria-hidden="true"></span>
+          <span class="hero-circle hero-circle-3" aria-hidden="true"></span>
+          <span class="hero-circle hero-circle-4" aria-hidden="true"></span>
+          <span class="hero-circle hero-circle-5" aria-hidden="true"></span>
+          <span class="hero-circle hero-circle-6" aria-hidden="true"></span>
+          <span class="hero-circle hero-circle-7" aria-hidden="true"></span>
+          <span class="hero-circle hero-circle-8" aria-hidden="true"></span>
+
+          <div class="project-hero-left">
+            <span class="dashboard-logo">ExpoKonrad</span>
+            <p class="project-hero-tag" data-i18n="expokonrad.tag">Expo Konrad corporate website</p>
+          </div>
+
+          <!-- 4-device composition: drop the image at assets/proyectos/expokonrad-devices.png
+               and it will appear automatically, bleeding past the bottom edge of the
+               card (mirrors the hero photo effect on the homepage, but downward). -->
+          <div class="hero-devices-slot img-slot">
+            <img class="devices-img" src="assets/proyectos/expokonrad-devices.png" alt="ExpoKonrad shown across four device mockups">
+            <span class="slot-hint">
+              Coloca aquí la imagen de los 4 computadores<br>
+              <code>assets/proyectos/expokonrad-devices.png</code>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECT DETAIL ============ -->
+    <section class="project-detail">
+      <div class="container project-detail-grid">
+        <!-- single computer mockup: drop the image at assets/proyectos/expokonrad-mockup.png -->
+        <div class="project-mockup img-slot">
+          <img class="mockup-img" src="assets/proyectos/expokonrad-mockup.png" alt="ExpoKonrad shown on a desktop computer">
+          <span class="slot-hint">
+            Coloca aquí la imagen del computador<br>
+            <code>assets/proyectos/expokonrad-mockup.png</code>
+          </span>
+        </div>
+
+        <div class="project-info">
+          <span class="project-number">01</span>
+          <h2>ExpoKonrad</h2>
+          <p class="project-desc" data-i18n="expokonrad.desc">
+            The website belongs to an international logistics company called Expo Konrad, which offers export, import, customs clearance, warehousing, and transportation services with real-time digital tracking.<br><br>
+            Its UI design uses a blue corporate color palette, modular cards, icons, and badges to organize the information.
+          </p>
+          <div class="project-info-footer">
+            <a class="btn btn-green" href="https://estelaramos391.wixsite.com/expo_impo_konrad" target="_blank" rel="noopener">
+              <span data-i18n="project.viewBtn">Ver web</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <div class="project-badges">
+              <!-- planning documents behind the design -->
+              <a class="project-figma-badge" href="https://docs.google.com/document/d/1mkqGisDlSFHKNNGYy_dger31Ih_Vdx0sNEZdX9mQeYU/edit?usp=sharing" target="_blank" rel="noopener" aria-label="Open Business Motivational Model document">
+                <span class="project-ux-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".6" fill="currentColor" stroke="none"/></svg>
+                </span>
+                <span>BMM</span>
+              </a>
+              <a class="project-figma-badge" href="https://docs.google.com/document/d/1mkqGisDlSFHKNNGYy_dger31Ih_Vdx0sNEZdX9mQeYU/edit?usp=sharing" target="_blank" rel="noopener" aria-label="Open Canvas Model document">
+                <span class="project-ux-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="8" height="7" rx="1"/><rect x="13" y="4" width="8" height="7" rx="1"/><rect x="3" y="13" width="8" height="7" rx="1"/><rect x="13" y="13" width="8" height="7" rx="1"/></svg>
+                </span>
+                <span>Canvas</span>
+              </a>
+              <a class="project-figma-badge" href="https://docs.google.com/spreadsheets/d/14tWJRNHl3jo24YzjuKTYJaVpJuRuiivn4UtBSrO4YZE/edit?usp=sharing" target="_blank" rel="noopener" aria-label="Open BPMN - SW Architecture spreadsheet">
+                <span class="project-ux-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.2 7.2 10 16M16.8 7.2 14 16"/></svg>
+                </span>
+                <span>BPMN</span>
+              </a>
+            </div>
+          </div>
+          <!-- same tools shown on this project's card in the homepage grid -->
+          <div class="project-badges project-badges--full">
+            <div class="project-figma-badge">
+              <img src="assets/tools/figma.svg" alt="Figma">
+              <span>Figma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FONTS & COLORS ============ -->
+    <section class="project-palette">
+      <div class="container">
+        <h2 data-i18n="project.paletteTitle">Fonts &amp; Colors</h2>
+        <div class="palette-fonts">
+          <div class="font-card">
+            <span class="font-card-label" data-i18n="project.mainFont">Main font</span>
+            <strong class="font-name">Inter</strong>
+            <div class="font-row">
+              <span class="font-weight-label" data-i18n="project.bold">Bold</span>
+              <span class="font-aa font-aa--bold">Aa</span>
+              <span class="font-alphabet font-alphabet--bold">ABCDEFGHIJKLM<br>NOPQRSTUVWXYZ</span>
+            </div>
+          </div>
+          <div class="font-card">
+            <span class="font-card-label" data-i18n="project.secFonts">Secondary fonts</span>
+            <div class="font-row">
+              <span class="font-weight-label" data-i18n="project.medium">Medium</span>
+              <span class="font-aa font-aa--medium">Aa</span>
+              <span class="font-alphabet font-alphabet--medium">ABCDEFGHIJKLM<br>NOPQRSTUVWXYZ</span>
+            </div>
+            <div class="font-row">
+              <span class="font-weight-label" data-i18n="project.regular">Regular</span>
+              <span class="font-aa font-aa--regular">Aa</span>
+              <span class="font-alphabet font-alphabet--regular">ABCDEFGHIJKLM<br>NOPQRSTUVWXYZ</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="palette-swatches">
+          <div class="swatch" style="--sw:#326bf3"><span>#326BF3</span></div>
+          <div class="swatch" style="--sw:#0f1a2e"><span>#0F1A2E</span></div>
+          <div class="swatch" style="--sw:#abbbd7"><span>#ABBBD7</span></div>
+          <div class="swatch swatch--light" style="--sw:#e6eefb"><span>#E6EEFB</span></div>
+          <div class="swatch swatch--light" style="--sw:#ffffff"><span>#FFFFFF</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-card glass">
+          <span class="mail-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </span>
+          <div class="contact-text">
+            <h3 data-i18n="contact.title">Contact Me</h3>
+            <a href="mailto:isabellacastrocamacho117@gmail.com">isabellacastrocamacho117@gmail.com</a>
+          </div>
+          <a class="btn btn-blue" id="dmBtn" target="_blank" rel="noopener"
+             href="https://mail.google.com/mail/?view=cm&fs=1&to=isabellacastrocamacho117@gmail.com&su=Hello%20Isabella%20%E2%80%94%20from%20your%20portfolio">DM</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="back-top-wrap">
+      <a href="#top" class="back-top glass">
+        <span data-i18n="backTop">Back to top</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg>
+      </a>
+    </div>
+  </main>
+
+  <script src="js/project.js"></script>
+</body>
+</html>
