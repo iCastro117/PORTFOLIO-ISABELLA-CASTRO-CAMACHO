@@ -3,7 +3,7 @@
    ========================================================= */
 
 /* ---------- DATA (edit freely) ---------- */
-const TOOL = (name) => `assets/tools/${name}.svg`;
+const TOOL = (name) => name === "wix" ? "assets/proyectos/wix.png" : `assets/tools/${name}.svg`;
 
 // 22 projects → 4 pages of 6. Tools per project are the real stack of each one.
 const PROJECT_TAGS = [
@@ -38,6 +38,7 @@ const PROJECT_PAGES = {
   2: { title: "Dashboard, Car Sales", link: "project-dashboard.html" },
   3: { title: "Colombia Canta y Encanta, UX/UI Analysis & Redesign", link: "project-colombia.html" },
   4: { title: "TechXpress, UX/UI Ecommerce Design", link: "project-techxpress.html" },
+  5: { title: "Coffee Tour, A coffee experience in Chapinero, Bogotá", link: "project-coffeetour.html" },
 };
 const PROJECTS = PROJECT_TAGS.map((tags, i) => ({
   title: PROJECT_PAGES[i]?.title ?? "Grow, Organic & Healthy Food",

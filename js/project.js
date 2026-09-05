@@ -26,6 +26,8 @@ const I18N = {
     "colombia.desc": "This project is a UX/UI redesign of the official website for “Colombia Canta y Encanta”, a folk festival celebrating Colombian culture through music and dance.<br><br>The goal was to modernize the visual identity and simplify the journey for participants, with clear sections to join the contest, browse past events, and share the experience on social media.",
     "techxpress.tag": "UX/UI Ecommerce Design",
     "techxpress.desc": "This project is a UX/UI design for “TechXpress”, a fictitious e-commerce platform specializing in tech components and gaming peripherals.<br><br>The design uses a bold dark theme with vivid pink accents to appeal to a tech-savvy audience, featuring clear product categories, secure checkout messaging, and a dedicated support section.",
+    "coffeetour.tag": "A coffee experience in Chapinero, Bogotá",
+    "coffeetour.desc": "This project is an original website designed in Wix that highlights a coffee tour in Chapinero, Bogotá, Colombia.<br><br>The website is focused on providing an immersive experience to users, integrating interactive elements such as audios that describe the tour, photos that capture the essence of the coffee shops and the vibe of the neighborhood, and a detailed review of the four coffee shops visited.",
   },
   es: {
     "nav.home": "Inicio", "nav.about": "Sobre mí", "nav.tools": "Herramientas", "nav.projects": "Proyectos", "nav.background": "Trayectoria",
@@ -47,6 +49,8 @@ const I18N = {
     "colombia.desc": "Este proyecto es un rediseño UX/UI del sitio web oficial de “Colombia Canta y Encanta”, un festival folclórico que celebra la cultura colombiana a través de la música y la danza.<br><br>El objetivo fue modernizar la identidad visual y simplificar el recorrido de los participantes, con secciones claras para inscribirse al concurso, ver eventos pasados y compartir la experiencia en redes sociales.",
     "techxpress.tag": "Diseño UX/UI de Ecommerce",
     "techxpress.desc": "Este proyecto es un diseño UX/UI para “TechXpress”, una plataforma de ecommerce ficticia especializada en componentes tecnológicos y periféricos gaming.<br><br>El diseño usa un tema oscuro y llamativo con acentos rosa vibrante para atraer a un público tecnológico, con categorías de producto claras, mensajes de pago seguro y una sección dedicada a soporte.",
+    "coffeetour.tag": "Una experiencia cafetera en Chapinero, Bogotá",
+    "coffeetour.desc": "Este proyecto es un sitio web original diseñado en Wix que destaca un recorrido cafetero en Chapinero, Bogotá, Colombia.<br><br>El sitio está enfocado en brindar una experiencia inmersiva a los usuarios, integrando elementos interactivos como audios que describen el recorrido, fotos que capturan la esencia de las cafeterías y el ambiente del barrio, y una reseña detallada de las cuatro cafeterías visitadas.",
   },
 };
 

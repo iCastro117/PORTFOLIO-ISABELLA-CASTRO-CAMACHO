@@ -48,6 +48,7 @@ body.theme-plant     { --brand-mid: #0F693B; --brand-dark: #64B451; }
 body.theme-dashboard { --brand-mid: #B77EF8; --brand-dark: #EE81A7; }
 body.theme-colombia  { --brand-mid: #2c06b5; --brand-dark: #FABF22; }
 body.theme-techxpress { --brand-mid: #FF2D95; --brand-dark: #000000; }
+body.theme-coffeetour { --brand-mid: #F9C85F; --brand-dark: #935603; }
 
 .project-hero-card {
   position: relative; overflow: visible; isolation: isolate;
@@ -66,6 +67,15 @@ body.theme-techxpress { --brand-mid: #FF2D95; --brand-dark: #000000; }
 body.theme-colombia .project-hero-card {
   background: linear-gradient(135deg, var(--brand-mid) 0%, var(--brand-mid) 48%, var(--brand-dark) 82%, #FDF0CE 100%);
 }
+
+/* Coffee Tour: a brown "glow" sitting in the top-left corner, fading out
+   to gold toward the bottom-right. Written with fixed hex codes (not
+   var(--brand-mid/dark)) so it can't flip if those two get swapped later
+   — edit the colors/position right here instead. */
+body.theme-coffeetour .project-hero-card {
+  background: radial-gradient(135% 135% at 0% 0%, #935603 0%, #F9C85F 95%);
+}
+body.theme-coffeetour .project-number::before { background: var(--brand-mid); }
 
 /* soft white circles drifting inside the green card — purely decorative,
    sit behind the text and the devices image (both have a higher z-index) */
@@ -184,6 +194,10 @@ body.theme-techxpress .hero-devices-slot img { top: -60px; right: -80px; width: 
 body.theme-techxpress .project-hero { padding-bottom: 220px; }
 body.theme-techxpress .project-detail { padding-top: 160px; }
 
+body.theme-coffeetour .hero-devices-slot img { top: -60px; right: -100px; width: 800px; }
+body.theme-coffeetour .project-hero { padding-bottom: 220px; }
+body.theme-coffeetour .project-detail { padding-top: 160px; }
+
 /* ---------- detail ---------- */
 .project-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
 .project-mockup { aspect-ratio: 4 / 3; perspective: 1400px; }
@@ -254,6 +268,13 @@ body.theme-colombia .btn-green { background: linear-gradient(135deg, var(--brand
 }
 .project-figma-badge:hover img { box-shadow: 0 0 26px 8px rgba(255, 214, 102, .55); }
 
+/* the Wix wordmark is much wider than tall — stretching it into the
+   same 44×44 square as the other (roughly square) tool icons distorted
+   it, so it gets its own wider, unrounded box instead */
+body.theme-coffeetour .project-figma-badge img {
+  width: 112px; height: 44px; border-radius: 0; object-fit: contain;
+}
+
 /* "UX" badge: a real link (unlike the decorative Figma one) with a
    pulsing ring to draw the eye to it. The ring lives on ::after so its
    own animated box-shadow doesn't fight with the hover-glow box-shadow
@@ -323,8 +344,8 @@ body.theme-dashboard .font-alphabet { font-family: "Segoe UI", Tahoma, Geneva, s
   .project-detail { padding: 3.4rem 0 1rem; }
   /* la imagen se oculta en esta pantalla, así que el espacio extra
      "propio" de cada proyecto (ver arriba) tampoco hace falta aquí */
-  body.theme-grow .project-hero, body.theme-plant .project-hero, body.theme-dashboard .project-hero, body.theme-colombia .project-hero, body.theme-techxpress .project-hero { padding-bottom: 1rem; }
-  body.theme-grow .project-detail, body.theme-plant .project-detail, body.theme-dashboard .project-detail, body.theme-colombia .project-detail, body.theme-techxpress .project-detail { padding-top: 3.4rem; }
+  body.theme-grow .project-hero, body.theme-plant .project-hero, body.theme-dashboard .project-hero, body.theme-colombia .project-hero, body.theme-techxpress .project-hero, body.theme-coffeetour .project-hero { padding-bottom: 1rem; }
+  body.theme-grow .project-detail, body.theme-plant .project-detail, body.theme-dashboard .project-detail, body.theme-colombia .project-detail, body.theme-techxpress .project-detail, body.theme-coffeetour .project-detail { padding-top: 3.4rem; }
   .project-hero-card { padding: 2.6rem 2rem; }
   .project-hero-left { max-width: 100%; }
   .hero-devices-slot { display: none; }
