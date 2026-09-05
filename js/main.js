@@ -217,7 +217,7 @@ const extIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stro
 function renderProjects() {
   const start = (page - 1) * PER_PAGE;
   grid.innerHTML = PROJECTS.slice(start, start + PER_PAGE).map((p) => `
-    <a class="project" href="${p.link}" target="_blank" rel="noopener" aria-label="Open ${p.title}">
+    <a class="project" href="${p.link}" aria-label="Open ${p.title}">
       <div class="project-img"><img src="${p.img}" alt="${p.title}" loading="lazy"></div>
       <div class="project-body">
         <div class="project-head">
