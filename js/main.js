@@ -124,7 +124,7 @@ const I18N = {
     "awards.4": "Cisco Networking Academy — Introduction to Networks",
     "awards.5": "Cisco Networking Academy — Switching, Routing, and Wireless Essentials",
     "awards.6": "Best Research Assistant in Virtual Reality (2026)",
-    "awards.7": "Award 8",
+    "awards.7": "Coming Soon",
     "contact.title": "Contact Me", "backTop": "Back to top",
   },
   es: {
@@ -151,7 +151,7 @@ const I18N = {
     "awards.4": "Cisco Networking Academy — Introducción a Redes",
     "awards.5": "Cisco Networking Academy — Switching, Routing, and Wireless Essentials",
     "awards.6": "Mejor Asistente de Investigación en Realidad Virtual (2026)",
-    "awards.7": "Reconocimiento 8",
+    "awards.7": "Próximamente",
     "contact.title": "Contáctame", "backTop": "Volver arriba",
   },
 };
