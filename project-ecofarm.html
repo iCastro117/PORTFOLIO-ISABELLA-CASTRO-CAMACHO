@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bomberman Game · Isabella Castro Camacho</title>
-  <meta name="description" content="Bomberman — Game with MVC Design Pattern, a project by Isabella Castro Camacho.">
+  <title>Photo Montage · Isabella Castro Camacho</title>
+  <meta name="description" content="Photo Montage — Fincas de Turismo promotional card, a project by Isabella Castro Camacho.">
   <link rel="icon" href="assets/yo/isabella-cara.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/project.css">
 </head>
-<body id="top" class="theme-bomberman">
+<body id="top" class="theme-ecofarm">
 
   <!-- ============ NAVBAR ============ -->
   <header class="nav-wrap">
@@ -45,36 +45,32 @@
 
   <main>
     <!-- ============ PROJECT HERO ============ -->
-    <!-- Misma estructura de project-literarydb.html: título + descripción
-         corta + 3 botones de acceso a la izquierda, y a la derecha un
-         panel de color con la imagen del proyecto contenida adentro. -->
+    <!-- Misma estructura de project-photoretouch.html: título + descripción
+         corta + insignia de herramienta (sin link) + botón de PDF a la
+         izquierda, y a la derecha un panel de color con la imagen del
+         proyecto contenida adentro. -->
     <section class="project-hero">
       <div class="container">
         <div class="project-hero-card hero-v2 hero-panel">
           <div class="project-hero-left">
-            <h1 class="hero-lit-title">Bomberman<br><em data-i18n="bomberman.tag">Game with MVC Design Pattern</em></h1>
-            <p class="hero-lit-desc" data-i18n="bomberman.heroDesc">A classic Bomberman game built with the MVC (Model-View-Controller) design pattern.</p>
+            <!-- título en una sola línea: "Photo" en el color de marca, "montage" en negro -->
+            <h1 class="hero-lit-title" style="display:block;"><span style="color:var(--brand-mid);" data-i18n="ecofarm.tag">Photo</span> montage</h1>
+            <p class="hero-lit-desc" data-i18n="ecofarm.heroDesc">A promotional card for an eco-tourism farm, created through photomontage blending multiple scenic images.</p>
             <div class="hero-lit-links">
-              <a class="hero-lit-link" href="https://drive.google.com/file/d/1EdKHvOfhyGuokLbQb2FHm4Wgh3az8lbH/view?usp=sharing" target="_blank" rel="noopener">
+              <div class="hero-lit-link">
+                <span class="hero-lit-link-icon"><img src="assets/tools/photoshop.svg" alt=""></span>
+                <span>Photoshop</span>
+              </div>
+              <a class="hero-lit-link" href="https://drive.google.com/file/d/19fm2DbsolPjpi_oH8wz3McwUR2T1p7pw/view" target="_blank" rel="noopener">
                 <span class="hero-lit-link-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v4h4M9 13h6M9 17h4"/></svg>
                 </span>
                 <span>Pdf</span>
               </a>
-              <a class="hero-lit-link" href="https://drive.google.com/file/d/14yxYSTdCNhqpz1yPXjWzSSDxEKo4X4tN/view?usp=sharing" target="_blank" rel="noopener">
-                <span class="hero-lit-link-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-                </span>
-                <span>Ppt</span>
-              </a>
-              <a class="hero-lit-link hero-lit-link--github" href="https://github.com/iCastro117/BOMBERMAN-GAME.git" target="_blank" rel="noopener">
-                <span class="hero-lit-link-icon"><img src="assets/tools/github.svg" alt=""></span>
-                <span>GitHub</span>
-              </a>
             </div>
           </div>
 
-          <!-- drop the project photo/screenshot at assets/proyectos/bomberman-devices.png -->
+          <!-- drop the project photo/screenshot at assets/proyectos/ecofarm-devices.png -->
           <div class="hero-devices-slot img-slot">
             <span class="hero-circle hero-circle-1" aria-hidden="true"></span>
             <span class="hero-circle hero-circle-2" aria-hidden="true"></span>
@@ -84,10 +80,10 @@
             <span class="hero-circle hero-circle-6" aria-hidden="true"></span>
             <span class="hero-circle hero-circle-7" aria-hidden="true"></span>
             <span class="hero-circle hero-circle-8" aria-hidden="true"></span>
-            <img class="devices-img" src="assets/proyectos/bomberman-devices.png" alt="Bomberman project">
+            <img class="devices-img" src="assets/proyectos/ecofarm-devices.png" alt="Photo Montage project">
             <span class="slot-hint">
               Coloca aquí una imagen<br>
-              <code>assets/proyectos/bomberman-devices.png</code>
+              <code>assets/proyectos/ecofarm-devices.png</code>
             </span>
           </div>
         </div>
@@ -97,73 +93,37 @@
     <!-- ============ PROJECT DETAIL ============ -->
     <section class="project-detail">
       <div class="container">
-        <!-- gallery of screenshots (drop the images at assets/proyectos/bomberman-gallery1.png, -2.png, -3.png) -->
-        <h3 class="project-shots-title" data-i18n="project.shotsTitle">Project images</h3>
-        <div class="project-shots">
-          <div class="project-shot">
-            <div class="project-shot-frame img-slot">
-              <img src="assets/proyectos/bomberman-gallery1.png" alt="Bomberman screenshot 1">
-              <span class="slot-hint">
-                Imagen 1<br>
-                <code>assets/proyectos/bomberman-gallery1.png</code>
-              </span>
-            </div>
-          </div>
-          <div class="project-shot">
-            <div class="project-shot-frame img-slot">
-              <img src="assets/proyectos/bomberman-gallery2.png" alt="Bomberman screenshot 2">
-              <span class="slot-hint">
-                Imagen 2<br>
-                <code>assets/proyectos/bomberman-gallery2.png</code>
-              </span>
-            </div>
-          </div>
-          <div class="project-shot">
-            <div class="project-shot-frame img-slot">
-              <img src="assets/proyectos/bomberman-gallery3.png" alt="Bomberman screenshot 3">
-              <span class="slot-hint">
-                Imagen 3<br>
-                <code>assets/proyectos/bomberman-gallery3.png</code>
-              </span>
-            </div>
-          </div>
-        </div>
-
         <!-- scrolling name banner, purely decorative -->
         <div class="project-marquee" aria-hidden="true">
           <div class="project-marquee-track">
-            <span>Bomberman</span><span>*</span>
-            <span>Bomberman</span><span>*</span>
-            <span>Bomberman</span><span>*</span>
-            <span>Bomberman</span><span>*</span>
-            <span>Bomberman</span><span>*</span>
-            <span>Bomberman</span><span>*</span>
+            <span>Photo Montage</span><span>*</span>
+            <span>Photo Montage</span><span>*</span>
+            <span>Photo Montage</span><span>*</span>
+            <span>Photo Montage</span><span>*</span>
+            <span>Photo Montage</span><span>*</span>
+            <span>Photo Montage</span><span>*</span>
           </div>
         </div>
 
-        <!-- video demo, moderate size (not full container width) -->
-        <!-- This video's owner has embedding turned off on YouTube (error
-             153), so an <iframe> can never actually play it here — this is
-             a clickable poster instead, using the game's own title screen
-             as the cover, opening the real video on YouTube in a new tab. -->
-        <div class="project-video">
-          <h2 data-i18n="project.videoTitle">Video Demo</h2>
-          <a class="project-video-frame img-slot" href="https://youtu.be/YQmVqven_bk" target="_blank" rel="noopener" aria-label="Watch the demo video on YouTube">
-            <img src="assets/proyectos/bomberman-video-cover.png" alt="Bomberman demo video thumbnail" loading="lazy">
-            <span class="slot-hint">
-              Coloca aquí la portada del video<br>
-              <code>assets/proyectos/bomberman-video-cover.png</code>
-            </span>
-            <span class="project-video-play">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </span>
-            <span class="project-video-label" data-i18n="project.watchOnYoutube">Watch on YouTube</span>
-          </a>
-        </div>
+        <!-- no video and no image gallery for this project -->
 
         <div class="project-desc-card">
-          <p data-i18n="bomberman.desc1">This project consists of a game based on the classic Bomberman, developed using the MVC (Model-View-Controller) design pattern.</p>
-          <p data-i18n="bomberman.desc2">The game features a graphical interface that includes a board of squares with different elements such as a player (represented by a blue square), an enemy (red square) and bombs (black circles). Both characters have three lives, and the goal of the game is to dodge bombs and defeat the enemy.</p>
+          <p data-i18n="ecofarm.desc1">The design of this promotional card for the Eco-Tourism farm was created through a photomontage that incorporates various relevant images.</p>
+          <p data-i18n="ecofarm.desc2">Filters and shadows were used to cohesively integrate the different scenes, highlighting the natural beauty and unique experiences that the farm offers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COLORS (no fonts on this project) ============ -->
+    <section class="project-palette">
+      <div class="container">
+        <h2 data-i18n="project.colorsTitle">Colors</h2>
+        <div class="palette-swatches">
+          <div class="swatch" style="--sw:#6FA85C"><span>#6FA85C</span></div>
+          <div class="swatch" style="--sw:#F0B429"><span>#F0B429</span></div>
+          <div class="swatch" style="--sw:#5BA3D0"><span>#5BA3D0</span></div>
+          <div class="swatch" style="--sw:#000000"><span>#000000</span></div>
+          <div class="swatch swatch--light" style="--sw:#FFFFFF"><span>#FFFFFF</span></div>
         </div>
       </div>
     </section>

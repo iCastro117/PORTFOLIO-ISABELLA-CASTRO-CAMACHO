@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Magazine Design · Isabella Castro Camacho</title>
+  <meta name="description" content="Coffee Magazine Design, a project by Isabella Castro Camacho.">
+  <link rel="icon" href="assets/yo/isabella-cara.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/project.css">
+</head>
+<body id="top" class="theme-coffeemag">
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav-wrap">
+    <nav class="nav glass" aria-label="Main navigation">
+      <a href="index.html" class="brand">
+        <img src="assets/yo/isabella-cara.png" alt="Isabella Castro" class="brand-avatar">
+        <span>Portfolio</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#home" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About Me</a></li>
+        <li><a href="index.html#tools" data-i18n="nav.tools">Tools &amp; Skills</a></li>
+        <li><a href="index.html#projects" class="active" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="index.html#background" data-i18n="nav.background">Background</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="langBtn" aria-label="Change language" title="EN / ES">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
+        </button>
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode" title="Light / Dark">
+          <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ PROJECT HERO ============ -->
+    <!-- Misma estructura de project-photoretouch.html: título + descripción
+         corta + insignia de herramienta (sin link) + botón de PDF a la
+         izquierda, y a la derecha un panel de color con la imagen del
+         proyecto contenida adentro. -->
+    <section class="project-hero">
+      <div class="container">
+        <div class="project-hero-card hero-v2 hero-panel">
+          <div class="project-hero-left">
+            <h1 class="hero-lit-title"><em data-i18n="coffeemag.tagStart">Coffee</em>Magazine<em data-i18n="coffeemag.tagEnd">Design</em></h1>
+            <p class="hero-lit-desc" data-i18n="coffeemag.heroDesc">An editorial magazine celebrating Chapinero's best coffee shops, their flavors, stories, and cozy atmosphere.</p>
+            <div class="hero-lit-links">
+              <div class="hero-lit-link">
+                <span class="hero-lit-link-icon"><img src="assets/tools/indesign.svg" alt=""></span>
+                <span>InDesign</span>
+              </div>
+              <a class="hero-lit-link" href="https://drive.google.com/file/d/1SFKvXYZKL7P7NjsUZ-BYsjHShx2Apb33/view?usp=sharing" target="_blank" rel="noopener">
+                <span class="hero-lit-link-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v4h4M9 13h6M9 17h4"/></svg>
+                </span>
+                <span>Pdf</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- drop the project photo/screenshot at assets/proyectos/coffeemag-devices.png -->
+          <div class="hero-devices-slot img-slot">
+            <span class="hero-circle hero-circle-1" aria-hidden="true"></span>
+            <span class="hero-circle hero-circle-2" aria-hidden="true"></span>
+            <span class="hero-circle hero-circle-3" aria-hidden="true"></span>
+            <span class="hero-circle hero-circle-4" aria-hidden="true"></span>
+            <span class="hero-circle hero-circle-5" aria-hidden="true"></span>
+            <span class="hero-circle hero-circle-6" aria-hidden="true"></span>
+            <span class="hero-circle hero-circle-7" aria-hidden="true"></span>
+            <span class="hero-circle hero-circle-8" aria-hidden="true"></span>
+            <img class="devices-img" src="assets/proyectos/coffeemag-devices.png" alt="Coffee Magazine Design project">
+            <span class="slot-hint">
+              Coloca aquí una imagen<br>
+              <code>assets/proyectos/coffeemag-devices.png</code>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECT DETAIL ============ -->
+    <section class="project-detail">
+      <div class="container">
+        <!-- carrusel tipo revista: una sola imagen central + flechas que
+             "voltean la hoja" en 3D para pasar entre las 6 imágenes
+             (drop them at assets/proyectos/coffeemag-1.png ... -6.png) -->
+        <h3 class="project-shots-title" data-i18n="project.shotsTitle">Project images</h3>
+        <div class="mag-carousel">
+          <button class="mag-arrow" id="magPrev" aria-label="Previous page" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+          </button>
+          <div class="mag-carousel-stage img-slot" id="magStage">
+            <img class="mag-page" id="magPage" src="assets/proyectos/coffeemag-1.png" alt="Coffee Magazine Design page 1">
+            <span class="slot-hint">
+              Coloca aquí las 6 imágenes<br>
+              <code>assets/proyectos/coffeemag-1.png … coffeemag-6.png</code>
+            </span>
+          </div>
+          <button class="mag-arrow" id="magNext" aria-label="Next page" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+        <div class="mag-dots" id="magDots" aria-hidden="true">
+          <span class="mag-dot is-active"></span>
+          <span class="mag-dot"></span>
+          <span class="mag-dot"></span>
+          <span class="mag-dot"></span>
+          <span class="mag-dot"></span>
+          <span class="mag-dot"></span>
+        </div>
+
+        <!-- scrolling name banner, purely decorative -->
+        <div class="project-marquee" aria-hidden="true">
+          <div class="project-marquee-track">
+            <span>Coffee Magazine</span><span>*</span>
+            <span>Coffee Magazine</span><span>*</span>
+            <span>Coffee Magazine</span><span>*</span>
+            <span>Coffee Magazine</span><span>*</span>
+            <span>Coffee Magazine</span><span>*</span>
+            <span>Coffee Magazine</span><span>*</span>
+          </div>
+        </div>
+
+        <!-- no video for this project -->
+
+        <div class="project-desc-card">
+          <p data-i18n="coffeemag.desc1">An editorial project that celebrates the love for coffee and the spaces that surround it. This magazine is a tour of Chapinero's most beloved coffee shops, highlighting their flavors, stories, and cozy corners.</p>
+          <p data-i18n="coffeemag.desc2">With a clean and visually appealing design, it seeks to convey the essence of each place, like Levels Roasted Coffee, where each cup tells a story.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FONTS & COLORS ============ -->
+    <section class="project-palette">
+      <div class="container">
+        <h2 data-i18n="project.paletteTitle">Fonts &amp; Colors</h2>
+        <div class="palette-fonts">
+          <div class="font-card">
+            <span class="font-card-label" data-i18n="project.mainFont">Main font</span>
+            <strong class="font-name" style="font-family:'Montserrat', sans-serif;">Montserrat</strong>
+            <div class="font-row">
+              <span class="font-weight-label" data-i18n="project.bold">Bold</span>
+              <span class="font-aa font-aa--bold" style="font-family:'Montserrat', sans-serif; font-weight:700;">Aa</span>
+              <span class="font-alphabet font-alphabet--bold" style="font-family:'Montserrat', sans-serif; font-weight:700;">ABCDEFGHIJKLM<br>NOPQRSTUVWXYZ</span>
+            </div>
+          </div>
+          <div class="font-card">
+            <span class="font-card-label" data-i18n="project.secFonts">Secondary fonts</span>
+            <div class="font-row">
+              <span class="font-weight-label" data-i18n="project.medium">Medium</span>
+              <span class="font-aa font-aa--medium" style="font-family:'Montserrat', sans-serif; font-weight:500;">Aa</span>
+              <span class="font-alphabet font-alphabet--medium" style="font-family:'Montserrat', sans-serif; font-weight:500;">ABCDEFGHIJKLM<br>NOPQRSTUVWXYZ</span>
+            </div>
+            <div class="font-row">
+              <span class="font-weight-label" data-i18n="project.regular">Regular</span>
+              <span class="font-aa font-aa--regular" style="font-family:'Montserrat', sans-serif; font-weight:400;">Aa</span>
+              <span class="font-alphabet font-alphabet--regular" style="font-family:'Montserrat', sans-serif; font-weight:400;">ABCDEFGHIJKLM<br>NOPQRSTUVWXYZ</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="palette-swatches">
+          <div class="swatch" style="--sw:#69A3CE"><span>#69A3CE</span></div>
+          <div class="swatch" style="--sw:#8090A6"><span>#8090A6</span></div>
+          <div class="swatch" style="--sw:#A67153"><span>#A67153</span></div>
+          <div class="swatch" style="--sw:#BF5349"><span>#BF5349</span></div>
+          <div class="swatch" style="--sw:#0D0D0D"><span>#0D0D0D</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-card glass">
+          <span class="mail-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </span>
+          <div class="contact-text">
+            <h3 data-i18n="contact.title">Contact Me</h3>
+            <a href="mailto:isabellacastrocamacho117@gmail.com">isabellacastrocamacho117@gmail.com</a>
+          </div>
+          <a class="btn btn-blue" id="dmBtn" target="_blank" rel="noopener"
+             href="https://mail.google.com/mail/?view=cm&fs=1&to=isabellacastrocamacho117@gmail.com&su=Hello%20Isabella%20%E2%80%94%20from%20your%20portfolio">DM</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="back-top-wrap">
+      <a href="#top" class="back-top glass">
+        <span data-i18n="backTop">Back to top</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg>
+      </a>
+    </div>
+  </main>
+
+  <script src="js/project.js"></script>
+  <!-- magazine page-flip carousel: only used on this page -->
+  <script>
+    (function () {
+      var imgs = [
+        'assets/proyectos/coffeemag-1.png',
+        'assets/proyectos/coffeemag-2.png',
+        'assets/proyectos/coffeemag-3.png',
+        'assets/proyectos/coffeemag-4.png',
+        'assets/proyectos/coffeemag-5.png',
+        'assets/proyectos/coffeemag-6.png'
+      ];
+      var page = document.getElementById('magPage');
+      var prevBtn = document.getElementById('magPrev');
+      var nextBtn = document.getElementById('magNext');
+      var dots = document.querySelectorAll('#magDots .mag-dot');
+      if (!page || !prevBtn || !nextBtn) return;
+      var current = 0;
+      var flipping = false;
+
+      function updateDots() {
+        dots.forEach(function (d, i) { d.classList.toggle('is-active', i === current); });
+      }
+
+      function go(step, cls) {
+        if (flipping) return;
+        flipping = true;
+        page.classList.add(cls);
+        setTimeout(function () {
+          current = (current + step + imgs.length) % imgs.length;
+          page.src = imgs[current];
+          updateDots();
+        }, 350);
+        page.addEventListener('animationend', function handler() {
+          page.classList.remove(cls);
+          flipping = false;
+          page.removeEventListener('animationend', handler);
+        });
+      }
+
+      prevBtn.addEventListener('click', function () { go(-1, 'is-flip-prev'); });
+      nextBtn.addEventListener('click', function () { go(1, 'is-flip-next'); });
+    })();
+  </script>
+</body>
+</html>

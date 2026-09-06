@@ -36,27 +36,41 @@ const PROJECT_TAGS = [
 // projects with their own case-study page — everything else falls back to
 // the generic Grow placeholder title/link until it gets its own page too
 const PROJECT_PAGES = {
-  0: { title: "Grow, Organic & Healthy Food", link: "project-grow.html" },
-  1: { title: "Plant.io, Indoor Plants for a Better Life", link: "project-plant.html" },
-  2: { title: "Dashboard, Car Sales", link: "project-dashboard.html" },
-  3: { title: "Colombia Canta y Encanta, UX/UI Analysis & Redesign", link: "project-colombia.html" },
-  4: { title: "TechXpress, UX/UI Ecommerce Design", link: "project-techxpress.html" },
-  5: { title: "Coffee Tour, A coffee experience in Chapinero, Bogotá", link: "project-coffeetour.html" },
-  6: { title: "ExpoKonrad, Expo Konrad corporate website", link: "project-expokonrad.html" },
-  7: { title: "Psychological Monitor, USAR-COL 13", link: "project-psychmonitor.html" },
-  8: { title: "USS Sello Editorial, University Book Publishing & Sales Platform", link: "project-usssello.html" },
-  9: { title: "Literary Manager, Relational Database Design", link: "project-literarydb.html" },
-  10: { title: "Bomberman, Game with MVC Design Pattern", link: "project-bomberman.html" },
-  11: { title: "Medical Appointment Management System with FIFO and LIFO Data Structure", link: "project-citasmedicas.html" },
-  12: { title: "Sales and Vehicle Cost Management with MVC Pattern", link: "project-vehiculos.html" },
+  0: { title: "Grow, Organic & Healthy Food", titleEs: "Grow, Alimentos Orgánicos y Saludables", link: "project-grow.html" },
+  1: { title: "Plant.io, Indoor Plants for a Better Life", titleEs: "Plant.io, Plantas de Interior para una Vida Mejor", link: "project-plant.html" },
+  2: { title: "Dashboard, Car Sales", titleEs: "Dashboard, Ventas de Vehículos", link: "project-dashboard.html" },
+  3: { title: "Colombia Canta y Encanta, UX/UI Analysis & Redesign", titleEs: "Colombia Canta y Encanta, Análisis y Rediseño UX/UI", link: "project-colombia.html" },
+  4: { title: "TechXpress, UX/UI Ecommerce Design", titleEs: "TechXpress, Diseño UX/UI de Ecommerce", link: "project-techxpress.html" },
+  5: { title: "Coffee Tour, A coffee experience in Chapinero, Bogotá", titleEs: "Coffee Tour, Una experiencia cafetera en Chapinero, Bogotá", link: "project-coffeetour.html" },
+  6: { title: "ExpoKonrad, Expo Konrad corporate website", titleEs: "ExpoKonrad, Sitio web corporativo de Expo Konrad", link: "project-expokonrad.html" },
+  7: { title: "Psychological Monitor, USAR-COL 13", titleEs: "Monitor Psicológico, USAR-COL 13", link: "project-psychmonitor.html" },
+  8: { title: "USS Sello Editorial, University Book Publishing & Sales Platform", titleEs: "USS Sello Editorial, Plataforma de Publicación y Venta de Libros Universitarios", link: "project-usssello.html" },
+  9: { title: "Literary Manager, Relational Database Design", titleEs: "Literary Manager, Diseño de Base de Datos Relacional", link: "project-literarydb.html" },
+  10: { title: "Bomberman, Game with MVC Design Pattern", titleEs: "Bomberman, Juego con Patrón de Diseño MVC", link: "project-bomberman.html" },
+  11: { title: "Medical Appointment Management System with FIFO and LIFO Data Structure", titleEs: "Sistema de Gestión de Citas Médicas con Estructuras de Datos FIFO y LIFO", link: "project-citasmedicas.html" },
+  12: { title: "Sales and Vehicle Cost Management with MVC Pattern", titleEs: "Gestión de Ventas y Costos Vehiculares con Patrón MVC", link: "project-vehiculos.html" },
+  13: { title: "Payroll Management by Roles with MVC Pattern", titleEs: "Gestión de Nómina por Roles con Patrón MVC", link: "project-nomina.html" },
+  14: { title: "Vehicle Cost Simulator with MVC Pattern", titleEs: "Simulador de Costos Vehiculares con Patrón MVC", link: "project-simuladorvehiculos.html" },
+  15: { title: "Geographic Isolation and Application in Production", titleEs: "Aislamiento Geográfico y Aplicación en Producción", link: "project-geoisolation.html" },
+  16: { title: "Hamburger Packaging Design Mockup", titleEs: "Mockup de Diseño de Empaque para Hamburguesa", link: "project-burgerpackaging.html" },
+  17: { title: "Design and Construction of the Automata Structure Mechanism", titleEs: "Diseño y Construcción del Mecanismo de una Estructura Autómata", link: "project-automata.html" },
+  18: { title: "Painting, Drawing and Photo Retouching", titleEs: "Pintura, Dibujo y Retoque Fotográfico", link: "project-photoretouch.html" },
+  19: { title: "Photo Retouching", titleEs: "Retoque Fotográfico", link: "project-photomontage.html" },
+  20: { title: "Photo Montage", titleEs: "Fotomontaje", link: "project-ecofarm.html" },
+  21: { title: "Coffee Magazine Design", titleEs: "Diseño de Revista de Café", link: "project-coffeemag.html" },
 };
-const PROJECTS = PROJECT_TAGS.map((tags, i) => ({
-  title: PROJECT_PAGES[i]?.title ?? "Grow, Organic & Healthy Food",
-  sub: "E-commerce Web Site",
-  img: `assets/proyectos/proyecto${i + 1}.png`,
-  link: PROJECT_PAGES[i]?.link ?? "#",
-  tags,
-}));
+const PROJECT_SUB = { en: "E-commerce Web Site", es: "Sitio Web de Comercio Electrónico" };
+// rebuilt on every render (not just once) so it always reflects the
+// current language — see renderProjects() below
+function buildProjects() {
+  return PROJECT_TAGS.map((tags, i) => ({
+    title: (lang === "es" ? PROJECT_PAGES[i]?.titleEs : PROJECT_PAGES[i]?.title) ?? PROJECT_PAGES[0].title,
+    sub: PROJECT_SUB[lang],
+    img: `assets/proyectos/proyecto${i + 1}.png`,
+    link: PROJECT_PAGES[i]?.link ?? "#",
+    tags,
+  }));
+}
 
 const EXPERIENCE = {
   ux: [
@@ -79,7 +93,7 @@ const EXPERIENCE = {
   ],
 };
 
-const AWARDS = Array.from({ length: 6 }, (_, i) => ({
+const AWARDS = Array.from({ length: 8 }, (_, i) => ({
   img: `assets/awards/award${i + 1}.png`,
   key: `awards.${i}`,                    // caption text lives in I18N, see below
 }));
@@ -103,9 +117,14 @@ const I18N = {
     "projects.eyebrow": "FEATURE PROJECTS", "projects.title": "Selected Work",
     "exp.eyebrow": "BACKGROUND", "exp.title": "Experience",
     "awards.eyebrow": "Along the way", "awards.title": "Awards",
-    "awards.0": "Best Research Assistant in Virtual Reality",
-    "awards.1": "Award 2", "awards.2": "Award 3", "awards.3": "Award 4",
-    "awards.4": "Award 5", "awards.5": "Award 6",
+    "awards.0": "Honor Mention for Best GPA — School of Systems Engineering (2025-1)",
+    "awards.1": "Honor Mention for Best GPA — School of Systems Engineering (2025-2)",
+    "awards.2": "Honor Mention for Best GPA — School of Systems Engineering (2023-1)",
+    "awards.3": "Artificial Intelligence Certificate",
+    "awards.4": "Cisco Networking Academy — Introduction to Networks",
+    "awards.5": "Cisco Networking Academy — Switching, Routing, and Wireless Essentials",
+    "awards.6": "Best Research Assistant in Virtual Reality (2026)",
+    "awards.7": "Award 8",
     "contact.title": "Contact Me", "backTop": "Back to top",
   },
   es: {
@@ -125,9 +144,14 @@ const I18N = {
     "projects.eyebrow": "PROYECTOS DESTACADOS", "projects.title": "Trabajos seleccionados",
     "exp.eyebrow": "TRAYECTORIA", "exp.title": "Experiencia",
     "awards.eyebrow": "En el camino", "awards.title": "Reconocimientos",
-    "awards.0": "Mejor Asistente de Investigación en Realidad Virtual",
-    "awards.1": "Reconocimiento 2", "awards.2": "Reconocimiento 3", "awards.3": "Reconocimiento 4",
-    "awards.4": "Reconocimiento 5", "awards.5": "Reconocimiento 6",
+    "awards.0": "Mención de Honor por Mejor Promedio — Facultad de Ingeniería de Sistemas (2025-1)",
+    "awards.1": "Mención de Honor por Mejor Promedio — Facultad de Ingeniería de Sistemas (2025-2)",
+    "awards.2": "Mención de Honor por Mejor Promedio — Facultad de Ingeniería de Sistemas (2023-1)",
+    "awards.3": "Certificado en Inteligencia Artificial",
+    "awards.4": "Cisco Networking Academy — Introducción a Redes",
+    "awards.5": "Cisco Networking Academy — Switching, Routing, and Wireless Essentials",
+    "awards.6": "Mejor Asistente de Investigación en Realidad Virtual (2026)",
+    "awards.7": "Reconocimiento 8",
     "contact.title": "Contáctame", "backTop": "Volver arriba",
   },
 };
@@ -235,8 +259,9 @@ let page = 1;
 const extIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg>`;
 
 function renderProjects() {
+  const projects = buildProjects();
   const start = (page - 1) * PER_PAGE;
-  grid.innerHTML = PROJECTS.slice(start, start + PER_PAGE).map((p) => `
+  grid.innerHTML = projects.slice(start, start + PER_PAGE).map((p) => `
     <a class="project" href="${p.link}" aria-label="Open ${p.title}">
       <div class="project-img"><img src="${p.img}" alt="${p.title}" loading="lazy"></div>
       <div class="project-body">
@@ -249,7 +274,7 @@ function renderProjects() {
       </div>
     </a>`).join("");
 
-  const pages = Math.ceil(PROJECTS.length / PER_PAGE);
+  const pages = Math.ceil(projects.length / PER_PAGE);
   pag.innerHTML = Array.from({ length: pages }, (_, i) => `<button class="${i + 1 === page ? "active" : ""}" data-page="${i + 1}">${i + 1}</button>`).join("");
 }
 pag.addEventListener("click", (e) => {
@@ -261,6 +286,10 @@ pag.addEventListener("click", (e) => {
   $("#projects").scrollIntoView({ behavior: "smooth", block: "start" });
 });
 renderProjects();
+// re-render the project cards (title + subtitle) whenever the language
+// toggles — applyLang() only updates elements with [data-i18n], and the
+// cards are built dynamically, so they need their own refresh here
+$("#langBtn").addEventListener("click", renderProjects);
 
 /* ---------- Experience tabs ---------- */
 const timeline = $("#timeline");

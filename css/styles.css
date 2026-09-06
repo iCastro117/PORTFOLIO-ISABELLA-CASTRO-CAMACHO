@@ -402,6 +402,11 @@ h2 { font-size: clamp(1.6rem, 2.6vw, 2rem); font-weight: 700; margin-bottom: 1.4
 .tint-ai { filter: none; }
 [data-theme="dark"] .tool-grid img[src$="json.svg"],
 [data-theme="dark"] .tool-grid img[src$="github.svg"] { filter: invert(1); }
+/* Illustrator/Photoshop icons are drawn almost black (#330000/#001e36),
+   so on the dark card background they nearly disappear — invert them to
+   white in dark mode, same fix as json/github above. */
+[data-theme="dark"] .tool-grid img[src$="illustrator.svg"],
+[data-theme="dark"] .tool-grid img[src$="photoshop.svg"] { filter: invert(1); }
 
 /* =========================================================
    PROJECTS
