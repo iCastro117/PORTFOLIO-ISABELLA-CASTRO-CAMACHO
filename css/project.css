@@ -737,17 +737,36 @@ body.theme-dashboard .font-alphabet { font-family: "Segoe UI", Tahoma, Geneva, s
      "propio" de cada proyecto (ver arriba) tampoco hace falta aquí */
   body.theme-grow .project-hero, body.theme-plant .project-hero, body.theme-dashboard .project-hero, body.theme-colombia .project-hero, body.theme-techxpress .project-hero, body.theme-coffeetour .project-hero, body.theme-expokonrad .project-hero, body.theme-psychmonitor .project-hero, body.theme-usssello .project-hero { padding-bottom: 1rem; }
   body.theme-grow .project-detail, body.theme-plant .project-detail, body.theme-dashboard .project-detail, body.theme-colombia .project-detail, body.theme-techxpress .project-detail, body.theme-coffeetour .project-detail, body.theme-expokonrad .project-detail, body.theme-psychmonitor .project-detail, body.theme-usssello .project-detail { padding-top: 3.4rem; }
-  .project-hero-card { padding: 2.6rem 2rem; }
+  .project-hero-card { padding: 2.6rem 2rem; overflow: hidden; }
   .project-hero-left { max-width: 100%; }
-  .hero-devices-slot { display: none; }
+  /* selector as specific as ".hero-v2 .hero-devices-slot" (which sets
+     display:flex for proyectos 10-22) so this hide-on-mobile rule wins
+     over it regardless of source order */
+  .project-hero-card .hero-devices-slot { display: none; }
   .project-detail-grid { grid-template-columns: 1fr; gap: 1.6rem; }
+  /* grid items default to min-width:auto, so non-wrapping content (like
+     the name marquee track) can force the single column wider than the
+     screen — this lets every item shrink to the real available width */
+  .project-detail-grid > * { min-width: 0; }
   body.theme-dashboard .project-detail-grid,
   body.theme-colombia .project-detail-grid,
   body.theme-techxpress .project-detail-grid { gap: 1.6rem; }
   .palette-fonts { grid-template-columns: 1fr; }
 }
+@media (max-width: 700px) {
+  /* modo teléfono: cada color de la paleta ocupa toda la fila, uno
+     debajo del otro, en vez de ir en pares/filas */
+  .palette-swatches { flex-direction: column; }
+  .swatch { width: 100%; }
+
+  /* las imágenes de mockup/galería nunca deben exigir más ancho del
+     que da la pantalla — se achican para caber, nunca se agrandan */
+  .project-mockup, .project-gallery-item, .project-shot {
+    max-width: 100%;
+  }
+  .hero-lit-links { flex-wrap: wrap; }
+}
 @media (max-width: 460px) {
   .project-hero-tag { font-size: 1rem; }
   .project-hero-sub { font-size: 1.25rem; }
-  .swatch { width: calc(50% - .5rem); }
 }
