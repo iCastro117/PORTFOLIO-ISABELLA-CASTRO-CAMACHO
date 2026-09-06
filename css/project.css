@@ -692,6 +692,15 @@ body.theme-citasmedicas .project-video-frame { max-width: 640px; margin: 0 auto;
   background: rgba(0,0,0,.55); color: #fff; backdrop-filter: blur(6px);
 }
 
+/* ---------- disclaimer (proyectos 1 y 2 — no son diseño propio) ---------- */
+.project-disclaimer { padding: 0 0 1rem; }
+.disclaimer-card {
+  display: flex; align-items: center; gap: 1.2rem;
+  padding: 1.4rem 2rem; border-radius: 20px;
+}
+.disclaimer-card .quote-mark { flex: none; font-size: 2.6rem; }
+.disclaimer-card p { margin: 0; font-style: italic; color: var(--text-soft); font-size: .92rem; line-height: 1.6; }
+
 /* ---------- fonts & colors ---------- */
 .project-palette { padding: 1rem 0 3.5rem; }
 .palette-fonts { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin-bottom: 2rem; }
@@ -738,12 +747,12 @@ body.theme-dashboard .font-alphabet { font-family: "Segoe UI", Tahoma, Geneva, s
    ============================================================ */
 .project-hero-card, .project-mockup, .project-info,
 .project-palette h2, .project-info h2,
-.font-card, .swatch, .contact-card, .project-video-frame {
+.font-card, .swatch, .disclaimer-card, .contact-card, .project-video-frame {
   opacity: 0;
 }
 .project-hero-card.in-view, .project-mockup.in-view, .project-info.in-view,
 .project-palette h2.in-view, .project-info h2.in-view,
-.font-card.in-view, .swatch.in-view, .contact-card.in-view, .project-video-frame.in-view {
+.font-card.in-view, .swatch.in-view, .disclaimer-card.in-view, .contact-card.in-view, .project-video-frame.in-view {
   opacity: 1;
   animation: reveal-up .7s var(--ease) backwards;
 }

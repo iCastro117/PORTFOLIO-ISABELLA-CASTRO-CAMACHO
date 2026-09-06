@@ -20,6 +20,7 @@ const I18N = {
     "grow.desc": "This project is a website aimed at selling organic and healthy foods under the brand “Grow”. The design reflects values such as sustainability, freshness and healthy living, incorporating visual elements related to fruits, vegetables and natural colors that reinforce its ecological identity.<br><br>My participation in this project was not as the author of the original design, but as part of a practical exercise.",
     "plant.tag": "Indoor Plants for a Better Life",
     "plant.desc": "This project is a website for a fictitious brand called “Plant.io,” specializing in the sale of decorative and indoor plants. The design has a modern and elegant approach, with a background that evokes nature through green leaf textures.<br><br>It is aimed at highlighting popular products and trends in home plants, with well-defined sections such as “Trendy Plants,” “Best Sellers” and “Customer Reviews”.",
+    "project.disclaimer": "This project was made as a reference and practice exercise. It is not an original design of mine, and I claim no authorship or copyright over it.",
     "dashboard.tag": "Car Sales",
     "dashboard.sub": "Sales analytics<br>integration panel",
     "dashboard.desc": "The goal is to identify whether the problem of low sales is due to specific brands, cities, salespeople, or other unknown factors.",
@@ -107,6 +108,7 @@ const I18N = {
     "grow.desc": "Este proyecto es un sitio web enfocado en la venta de alimentos orgánicos y saludables bajo la marca “Grow”. El diseño refleja valores como la sostenibilidad, la frescura y la vida saludable, incorporando elementos visuales relacionados con frutas, verduras y colores naturales que refuerzan su identidad ecológica.<br><br>Mi participación en este proyecto no fue como autora del diseño original, sino como parte de un ejercicio práctico.",
     "plant.tag": "Plantas de Interior para una Vida Mejor",
     "plant.desc": "Este proyecto es un sitio web para una marca ficticia llamada “Plant.io”, especializada en la venta de plantas decorativas y de interior. El diseño tiene un enfoque moderno y elegante, con un fondo que evoca la naturaleza a través de texturas de hojas verdes.<br><br>Está orientado a destacar productos populares y tendencias en plantas para el hogar, con secciones bien definidas como “Trendy Plants”, “Best Sellers” y “Customer Reviews”.",
+    "project.disclaimer": "Este proyecto fue realizado como referencia y ejercicio de práctica. No es un diseño propio, y no reclamo autoría ni derechos de autor sobre él.",
     "dashboard.tag": "Car Sales",
     "dashboard.sub": "Panel de análisis<br>de ventas",
     "dashboard.desc": "El objetivo es identificar si el problema de las bajas ventas se debe a marcas específicas, ciudades, vendedores u otros factores desconocidos.",
@@ -256,7 +258,7 @@ if (mockupImg) {
 }
 
 /* ---------- Scroll reveal ---------- */
-const REVEAL = ".project-hero-card, .project-mockup, .project-info, h2, .font-card, .swatch, .contact-card, .project-video-frame";
+const REVEAL = ".project-hero-card, .project-mockup, .project-info, h2, .font-card, .swatch, .disclaimer-card, .contact-card, .project-video-frame";
 const revealObs = new IntersectionObserver((entries) => {
   entries.forEach((en) => {
     if (!en.isIntersecting) return;
