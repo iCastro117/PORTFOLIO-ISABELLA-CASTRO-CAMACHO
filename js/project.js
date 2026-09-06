@@ -7,7 +7,7 @@
 
 const I18N = {
   en: {
-    "nav.home": "Home", "nav.about": "About Me", "nav.tools": "Tools & Skills", "nav.projects": "Projects", "nav.background": "Background",
+    "nav.home": "Home", "nav.about": "About Me", "nav.tools": "Tools & Skills", "nav.projects": "Projects", "nav.background": "Background", "nav.awards": "Awards",
     "contact.title": "Contact Me", "backTop": "Back to top",
     "project.sub": "Landing Page -<br>E-commerce",
     "project.viewBtn": "View site",
@@ -95,7 +95,7 @@ const I18N = {
     "coffeemag.desc2": "With a clean and visually appealing design, it seeks to convey the essence of each place, like Levels Roasted Coffee, where each cup tells a story.",
   },
   es: {
-    "nav.home": "Inicio", "nav.about": "Sobre mí", "nav.tools": "Herramientas", "nav.projects": "Proyectos", "nav.background": "Trayectoria",
+    "nav.home": "Inicio", "nav.about": "Sobre mí", "nav.tools": "Herramientas", "nav.projects": "Proyectos", "nav.background": "Trayectoria", "nav.awards": "Reconocimientos",
     "contact.title": "Contáctame", "backTop": "Volver arriba",
     "project.sub": "Landing Page -<br>E-commerce",
     "project.viewBtn": "Ver web",
@@ -189,13 +189,17 @@ const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 
 /* ---------- Navbar ---------- */
 const navToggle = $("#navToggle");
-const navLinks = $("#navLinks");
-if (navToggle && navLinks) {
-  navToggle.addEventListener("click", () => {
-    const open = navLinks.classList.toggle("open");
+const navDrawer = $("#navLinksDrawer"); // separate mobile drawer, see index.html comment
+const navBackdrop = $("#navBackdrop");
+if (navToggle && navDrawer) {
+  const setNavOpen = (open) => {
+    navDrawer.classList.toggle("open", open);
+    navBackdrop?.classList.toggle("open", open);
     navToggle.setAttribute("aria-expanded", open);
-  });
-  $$(".nav-links a").forEach((a) => a.addEventListener("click", () => navLinks.classList.remove("open")));
+  };
+  navToggle.addEventListener("click", () => setNavOpen(!navDrawer.classList.contains("open")));
+  navBackdrop?.addEventListener("click", () => setNavOpen(false));
+  $$(".nav-links a").forEach((a) => a.addEventListener("click", () => setNavOpen(false)));
 }
 
 /* ---------- Theme ---------- */

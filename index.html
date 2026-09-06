@@ -29,6 +29,7 @@
         <li><a href="#tools" data-i18n="nav.tools">Tools &amp; Skills</a></li>
         <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
         <li><a href="#background" data-i18n="nav.background">Background</a></li>
+        <li><a href="#awards" data-i18n="nav.awards">Awards</a></li>
       </ul>
       <div class="nav-actions">
         <button class="icon-btn" id="langBtn" aria-label="Change language" title="EN / ES">
@@ -40,6 +41,19 @@
         </button>
       </div>
     </nav>
+    <!-- the mobile drawer lives outside <nav> on purpose: <nav> has the
+         .glass backdrop-filter, which creates a containing block for
+         position:fixed children, so a fixed drawer nested inside it would
+         get trapped inside the small pill instead of covering the screen -->
+    <ul class="nav-links nav-links--drawer" id="navLinksDrawer" aria-label="Main navigation">
+      <li><a href="#home" data-i18n="nav.home">Home</a></li>
+      <li><a href="#about" data-i18n="nav.about">About Me</a></li>
+      <li><a href="#tools" data-i18n="nav.tools">Tools &amp; Skills</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="#background" data-i18n="nav.background">Background</a></li>
+      <li><a href="#awards" data-i18n="nav.awards">Awards</a></li>
+    </ul>
+    <div class="nav-backdrop" id="navBackdrop"></div>
   </header>
 
   <!-- unsharp kernel used to crisp up the hero photo after it is scaled up -->
@@ -126,10 +140,6 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.5V5.5a1.5 1.5 0 0 1 3 0v6M12 11V4a1.5 1.5 0 0 1 3 0v7M15 11.5V6.5a1.5 1.5 0 0 1 3 0v8.5a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7l-3.3-4.9a1.4 1.4 0 0 1 2.2-1.7L9 13"/><path d="M3 5a4 4 0 0 1 4-2M21 19a4 4 0 0 1-4 2" stroke-dasharray="1 2"/></svg>
                   </button>
                   <button type="button" class="flip-title flip-trigger" id="flipTrigger" aria-label="Turn over to share portfolio"><strong data-i18n="flip.turn">Turn over to</strong><span data-i18n="flip.share">Share portfolio</span></button>
-                  <a href="assets/cv-isabella-castro.pdf" download class="btn btn-blue btn-sm">
-                    <span data-i18n="flip.download">Download</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M4 19h16"/></svg>
-                  </a>
                 </div>
                 <div class="flip-face flip-back">
                   <div class="qr-box" id="qrBox"></div>
@@ -288,15 +298,22 @@
     <section class="contact" id="contact">
       <div class="container">
         <div class="contact-card glass">
-          <span class="mail-ico">
+          <a class="mail-ico" target="_blank" rel="noopener" aria-label="Send me an email"
+             href="https://mail.google.com/mail/?view=cm&fs=1&to=isabellacastrocamacho117@gmail.com&su=Hello%20Isabella%20%E2%80%94%20from%20your%20portfolio">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-          </span>
+          </a>
           <div class="contact-text">
             <h3 data-i18n="contact.title">Contact Me</h3>
-            <a href="mailto:isabellacastrocamacho117@gmail.com">isabellacastrocamacho117@gmail.com</a>
+            <p data-i18n="contact.invite">Have a project in mind? Send me an email and let's make it happen.</p>
           </div>
-          <a class="btn btn-blue" id="dmBtn" target="_blank" rel="noopener"
-             href="https://mail.google.com/mail/?view=cm&fs=1&to=isabellacastrocamacho117@gmail.com&su=Hello%20Isabella%20%E2%80%94%20from%20your%20portfolio">DM</a>
+          <div class="contact-actions">
+            <a class="btn btn-blue" id="dmBtn" target="_blank" rel="noopener" data-i18n="contact.emailBtn"
+               href="https://mail.google.com/mail/?view=cm&fs=1&to=isabellacastrocamacho117@gmail.com&su=Hello%20Isabella%20%E2%80%94%20from%20your%20portfolio">Send an email</a>
+            <a class="btn btn-dark" href="assets/cv-isabella-castro.pdf" download>
+              <span data-i18n="contact.cvBtn">Download CV</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M4 19h16"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -101,7 +101,7 @@ const AWARDS = Array.from({ length: 8 }, (_, i) => ({
 /* ---------- i18n ---------- */
 const I18N = {
   en: {
-    "nav.home": "Home", "nav.about": "About Me", "nav.tools": "Tools & Skills", "nav.projects": "Projects", "nav.background": "Background",
+    "nav.home": "Home", "nav.about": "About Me", "nav.tools": "Tools & Skills", "nav.projects": "Projects", "nav.background": "Background", "nav.awards": "Awards",
     "hero.notHow": "It's not how", "hero.looks": "IT LOOKS", "hero.itsHow": "It's how", "hero.works": "IT WORKS",
     "hero.desc": "Systems engineering professional with strong passion for UX/UI design and the creation of user centered digital experiences.",
     "hero.projectsBtn": "Projects", "hero.companies": "Companies", "hero.workedFor": "I have worked for.", "hero.profile": "Profile",
@@ -126,9 +126,11 @@ const I18N = {
     "awards.6": "Best Research Assistant in Virtual Reality (2026)",
     "awards.7": "MICRO1 - Freelancer AI Trainer",
     "contact.title": "Contact Me", "backTop": "Back to top",
+    "contact.invite": "Have a project in mind? Send me an email and let's make it happen.",
+    "contact.emailBtn": "Send an email", "contact.cvBtn": "Download CV",
   },
   es: {
-    "nav.home": "Inicio", "nav.about": "Sobre mí", "nav.tools": "Herramientas", "nav.projects": "Proyectos", "nav.background": "Trayectoria",
+    "nav.home": "Inicio", "nav.about": "Sobre mí", "nav.tools": "Herramientas", "nav.projects": "Proyectos", "nav.background": "Trayectoria", "nav.awards": "Reconocimientos",
     "hero.notHow": "No es cómo", "hero.looks": "SE VE", "hero.itsHow": "Es cómo", "hero.works": "FUNCIONA",
     "hero.desc": "Profesional en ingeniería de sistemas con gran pasión por el diseño UX/UI y la creación de experiencias digitales centradas en el usuario.",
     "hero.projectsBtn": "Proyectos", "hero.companies": "Empresas", "hero.workedFor": "con las que he trabajado.", "hero.profile": "Perfil",
@@ -153,6 +155,8 @@ const I18N = {
     "awards.6": "Mejor Asistente de Investigación en Realidad Virtual (2026)",
     "awards.7": "Próximamente",
     "contact.title": "Contáctame", "backTop": "Volver arriba",
+    "contact.invite": "¿Tienes un proyecto en mente? Envíame un correo y hagámoslo realidad.",
+    "contact.emailBtn": "Enviar un correo", "contact.cvBtn": "Descargar CV",
   },
 };
 
@@ -170,15 +174,19 @@ function toast(msg) {
 
 /* ---------- Navbar ---------- */
 const navToggle = $("#navToggle");
-const navLinks = $("#navLinks");
-navToggle.addEventListener("click", () => {
-  const open = navLinks.classList.toggle("open");
+const navDrawer = $("#navLinksDrawer"); // separate mobile drawer, see index.html comment
+const navBackdrop = $("#navBackdrop");
+function setNavOpen(open) {
+  navDrawer.classList.toggle("open", open);
+  navBackdrop?.classList.toggle("open", open);
   navToggle.setAttribute("aria-expanded", open);
-});
-$$(".nav-links a").forEach((a) => a.addEventListener("click", () => navLinks.classList.remove("open")));
+}
+navToggle.addEventListener("click", () => setNavOpen(!navDrawer.classList.contains("open")));
+navBackdrop?.addEventListener("click", () => setNavOpen(false));
+$$(".nav-links a").forEach((a) => a.addEventListener("click", () => setNavOpen(false)));
 
 // Active link on scroll
-const sections = ["home", "about", "tools", "projects", "background"].map((id) => document.getElementById(id)).filter(Boolean);
+const sections = ["home", "about", "tools", "projects", "background", "awards"].map((id) => document.getElementById(id)).filter(Boolean);
 function updateActiveLink() {
   const y = window.scrollY + window.innerHeight * 0.4;
   let current = sections[0];

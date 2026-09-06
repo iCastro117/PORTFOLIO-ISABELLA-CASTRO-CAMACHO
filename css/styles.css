@@ -43,9 +43,13 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; font-size: 17px; }
+/* keeps anchor jumps (#home, #projects, ...) from landing a section's
+   title right underneath the sticky glass navbar — nav-wrap is ~86px
+   tall plus its own top padding, so give a bit more room than that */
+html { scroll-behavior: smooth; font-size: 17px; scroll-padding-top: 100px; overflow-x: hidden; }
 body {
   margin: 0;
+  overflow-x: hidden;
   font-family: var(--font);
   color: var(--text);
   background: var(--bg);
@@ -120,17 +124,26 @@ h2 { font-size: clamp(1.6rem, 2.6vw, 2rem); font-weight: 700; margin-bottom: 1.4
 }
 .brand { display: flex; align-items: center; gap: .6rem; font-weight: 700; font-size: 1.05rem; }
 .brand-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: top; box-shadow: var(--shadow-sm); }
-.nav-links { display: flex; gap: 2.6rem; }
+.nav-links { display: flex; align-items: center; gap: .4rem; }
+/* the mobile drawer list only exists for narrow screens (see the
+   @media (max-width: 760px) block) — hidden by default on desktop */
+.nav-links.nav-links--drawer { display: none; }
 .nav-links a {
-  font-weight: 500; font-size: 1rem; color: var(--text-soft); position: relative; padding: .25rem 0;
-  transition: color .25s;
+  display: inline-block;
+  font-weight: 500; font-size: 1rem; color: var(--text-soft);
+  padding: .5rem 1rem; border-radius: 999px;
+  transition: color .25s, background .25s;
 }
-.nav-links a::after {
-  content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 2px; border-radius: 2px;
-  background: var(--blue); transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease);
+/* glass-blue "chip" that lights up on hover, keyboard focus, tap (mobile
+   :active) and while it's the active/current section — same treatment
+   for the desktop pill nav and the mobile drawer below */
+.nav-links a:hover, .nav-links a:focus-visible, .nav-links a:active, .nav-links a.active {
+  color: var(--blue); background: rgba(63, 111, 181, .14);
 }
-.nav-links a:hover, .nav-links a.active { color: var(--blue); }
-.nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+[data-theme="dark"] .nav-links a:hover, [data-theme="dark"] .nav-links a:focus-visible,
+[data-theme="dark"] .nav-links a:active, [data-theme="dark"] .nav-links a.active {
+  color: #cfe0ff; background: rgba(90, 139, 214, .25);
+}
 .nav-actions { display: flex; gap: .5rem; }
 .icon-btn {
   width: 40px; height: 40px; border-radius: 50%;
@@ -555,14 +568,22 @@ h2 { font-size: clamp(1.6rem, 2.6vw, 2rem); font-weight: 700; margin-bottom: 1.4
    CONTACT
    ========================================================= */
 .contact { padding: 1rem 0 2rem; }
-.contact-card { display: flex; align-items: center; gap: 1.4rem; padding: 1.4rem 2rem; }
-.mail-ico { width: 62px; height: 62px; border-radius: 16px; background: var(--blue-light); color: var(--blue-ink); display: grid; place-items: center; box-shadow: inset 0 2px 0 #fff, var(--shadow-sm); }
+.contact-card { display: flex; align-items: center; gap: 1.4rem; padding: 1.4rem 2rem; flex-wrap: wrap; }
+/* the mail icon is itself a link now (no plain-text email address on the
+   page for scrapers/spam-bots to harvest) — it grows on hover like the
+   other icon buttons on the page, doubling as a second way to contact */
+.mail-ico {
+  width: 62px; height: 62px; border-radius: 16px; background: var(--blue-light); color: var(--blue-ink);
+  display: grid; place-items: center; box-shadow: inset 0 2px 0 #fff, var(--shadow-sm);
+  transition: transform .3s var(--ease), box-shadow .3s, width .3s var(--ease), height .3s var(--ease);
+}
+.mail-ico:hover { width: 74px; height: 74px; transform: scale(1.04); box-shadow: inset 0 2px 0 #fff, var(--shadow); }
 .mail-ico svg { width: 32px; height: 32px; }
-.contact-text { flex: 1; }
+.contact-text { flex: 1; min-width: 200px; }
 .contact-text h3 { font-size: 1.4rem; color: var(--blue-ink); font-weight: 700; }
-.contact-text a { font-size: .95rem; color: var(--text-soft); transition: color .3s; }
-.contact-text a:hover { color: var(--blue); }
-#dmBtn { padding-inline: 2.6rem; }
+.contact-text p { margin: .3rem 0 0; font-size: .95rem; color: var(--text-soft); }
+.contact-actions { display: flex; align-items: center; gap: .8rem; flex-wrap: wrap; }
+#dmBtn { padding-inline: 2rem; }
 
 .back-top-wrap { display: flex; justify-content: center; padding: 1rem 0 3rem; }
 .back-top { display: inline-flex; align-items: center; gap: .5rem; padding: .6rem 1.4rem; border-radius: 999px; font-weight: 500; font-size: .95rem; transition: transform .3s var(--ease); }
@@ -598,25 +619,44 @@ h2 { font-size: clamp(1.6rem, 2.6vw, 2rem); font-weight: 700; margin-bottom: 1.4
   .tool-grid { grid-template-columns: repeat(5, 1fr); }
   .project-grid { grid-template-columns: repeat(2, 1fr); }
   .award { flex-basis: calc(33.333% - .95rem); }
+  /* "+18 Herramientas" (and the other two stats) get clipped between
+     roughly 760-1024px if left as 3 equal columns — one column per row
+     gives the longer Spanish labels all the width they need */
+  .stats { grid-template-columns: 1fr; padding: 1rem 1.2rem; }
+  .stat + .stat::before { display: none; }
 }
 @media (max-width: 760px) {
   .nav { padding-right: .6rem; }
   .nav-toggle { display: flex; }
-  .nav-links {
-    position: absolute; top: calc(100% + .6rem); left: 0; right: 0;
-    flex-direction: column; gap: .3rem; padding: 1rem;
-    background: var(--surface-glass); backdrop-filter: blur(18px); border-radius: 22px; box-shadow: var(--shadow);
-    display: none;
+  /* the desktop inline list hides completely; the separate drawer list
+     (outside <nav>'s backdrop-filter, see the HTML comment by it) takes
+     over, sliding in from the right over the page. Kept in the flow as
+     display:flex always so the transform can animate it, hidden via
+     translateX + a delayed visibility so it's not tabbable while closed */
+  #navLinks { display: none; }
+  .nav-links.nav-links--drawer {
+    display: flex;
+    position: fixed; top: 0; right: 0; bottom: 0; z-index: 60;
+    width: min(280px, 78vw); margin: 0;
+    flex-direction: column; align-items: stretch; gap: .3rem;
+    padding: 6.5rem 1.4rem 2rem;
+    background: var(--surface-glass); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+    border-radius: 0; border-left: 1px solid var(--border); box-shadow: var(--shadow-lg);
+    transform: translateX(100%); visibility: hidden;
+    transition: transform .4s var(--ease), visibility 0s linear .4s;
   }
-  .nav-links.open { display: flex; }
-  .nav-links a { display: block; padding: .6rem .8rem; }
-  .nav-links a::after { display: none; }
+  .nav-links.nav-links--drawer.open { transform: translateX(0); visibility: visible; transition: transform .4s var(--ease); }
+  .nav-links.nav-links--drawer a { display: block; }
+  .nav-backdrop {
+    position: fixed; inset: 0; z-index: 55;
+    background: rgba(10, 15, 30, .45); backdrop-filter: blur(2px);
+    opacity: 0; pointer-events: none; transition: opacity .35s;
+  }
+  .nav-backdrop.open { opacity: 1; pointer-events: auto; }
   .hero { --tagline-h: 3.6rem; }
   .hero-tagline strong { font-size: 1.35rem; }
-  .hero-card { grid-template-columns: 1fr; gap: 2rem; padding: 2.4rem 1.4rem 1.6rem; }
+  .hero-card { grid-template-columns: 1fr; gap: 2rem; padding: 2.4rem 1.4rem 1.6rem; overflow: hidden; }
   .hero-right { align-items: center; }
-  .stats { grid-template-columns: 1fr; padding: 1rem 1.2rem; }
-  .stat + .stat::before { display: none; }
   .quote-card { grid-template-columns: 1fr; padding: 1.4rem; }
   .quote-mark { line-height: .9; }
   .education { grid-template-columns: 1fr; gap: .6rem; }
@@ -628,6 +668,7 @@ h2 { font-size: clamp(1.6rem, 2.6vw, 2rem); font-weight: 700; margin-bottom: 1.4
   .award-arrow { width: 38px; height: 38px; }
   .award-arrow svg { width: 16px; height: 16px; }
   .contact-card { flex-direction: column; text-align: center; }
+  .contact-actions { justify-content: center; }
   .timeline { padding-left: 4rem; }
   .tl-marker { left: -4rem; width: 52px; }
   .tl-logo { width: 52px; height: 52px; padding: 9px; }
@@ -637,7 +678,10 @@ h2 { font-size: clamp(1.6rem, 2.6vw, 2rem); font-weight: 700; margin-bottom: 1.4
 @media (max-width: 460px) {
   .project-grid { grid-template-columns: 1fr; }
   .flip-scene { width: 100%; max-width: 260px; }
-  .award { flex-basis: 78%; }
+  /* one award card at a time, centered in the screen (equal peek of the
+     next/previous card on both sides) instead of snapped to the left edge */
+  .award { flex-basis: 78%; scroll-snap-align: center; }
+  .award-track { padding-inline: 11%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
