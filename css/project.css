@@ -729,6 +729,31 @@ body.theme-dashboard .font-alphabet { font-family: "Segoe UI", Tahoma, Geneva, s
 .swatch--light { border: 1px solid rgba(0,0,0,.15); }
 .swatch--light span { color: #16203a; background: rgba(0,0,0,.06); }
 
+/* ============================================================
+   ANIMACIÓN AL HACER SCROLL — js/project.js ya observa estos
+   mismos elementos con un IntersectionObserver y les agrega la
+   clase ".in-view" en cuanto entran en pantalla; esto solo les da
+   la apariencia (empiezan invisibles y "suben" hacia su lugar).
+   Reutiliza el keyframe "reveal-up" definido en styles.css.
+   ============================================================ */
+.project-hero-card, .project-mockup, .project-info,
+.project-palette h2, .project-info h2,
+.font-card, .swatch, .contact-card, .project-video-frame {
+  opacity: 0;
+}
+.project-hero-card.in-view, .project-mockup.in-view, .project-info.in-view,
+.project-palette h2.in-view, .project-info h2.in-view,
+.font-card.in-view, .swatch.in-view, .contact-card.in-view, .project-video-frame.in-view {
+  opacity: 1;
+  animation: reveal-up .7s var(--ease) backwards;
+}
+/* palette cards/swatches reveal one after another instead of all at once */
+.font-card.in-view:nth-child(2) { animation-delay: .08s; }
+.swatch.in-view:nth-child(2) { animation-delay: .07s; }
+.swatch.in-view:nth-child(3) { animation-delay: .14s; }
+.swatch.in-view:nth-child(4) { animation-delay: .21s; }
+.swatch.in-view:nth-child(5) { animation-delay: .28s; }
+
 /* ---------- responsive ---------- */
 @media (max-width: 1024px) {
   .project-hero { padding: 1.4rem 0 1rem; }
