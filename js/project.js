@@ -9,6 +9,8 @@ const I18N = {
   en: {
     "nav.home": "Home", "nav.about": "About Me", "nav.tools": "Tools & Skills", "nav.projects": "Projects", "nav.background": "Background", "nav.awards": "Awards",
     "contact.title": "Contact Me", "backTop": "Back to top",
+    "contact.invite": "Have a project in mind? Send me an email and let's make it happen.",
+    "contact.emailBtn": "Send an email", "contact.cvBtn": "Download CV",
     "project.sub": "Landing Page -<br>E-commerce",
     "project.viewBtn": "View site",
     "project.paletteTitle": "Fonts & Colors",
@@ -97,6 +99,8 @@ const I18N = {
   es: {
     "nav.home": "Inicio", "nav.about": "Sobre mí", "nav.tools": "Herramientas", "nav.projects": "Proyectos", "nav.background": "Trayectoria", "nav.awards": "Reconocimientos",
     "contact.title": "Contáctame", "backTop": "Volver arriba",
+    "contact.invite": "¿Tienes un proyecto en mente? Envíame un correo y hagámoslo realidad.",
+    "contact.emailBtn": "Enviar un correo", "contact.cvBtn": "Descargar CV",
     "project.sub": "Landing Page -<br>E-commerce",
     "project.viewBtn": "Ver web",
     "project.paletteTitle": "Fuentes & Colores",

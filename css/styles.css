@@ -46,10 +46,12 @@
 /* keeps anchor jumps (#home, #projects, ...) from landing a section's
    title right underneath the sticky glass navbar — nav-wrap is ~86px
    tall plus its own top padding, so give a bit more room than that */
+/* overflow-x: hidden lives ONLY on html, never on body — setting it on
+   body turns body into its own scroll container, which silently breaks
+   every position:sticky element on the page (the sticky navbar included) */
 html { scroll-behavior: smooth; font-size: 17px; scroll-padding-top: 100px; overflow-x: hidden; }
 body {
   margin: 0;
-  overflow-x: hidden;
   font-family: var(--font);
   color: var(--text);
   background: var(--bg);
@@ -117,6 +119,7 @@ h2 { font-size: clamp(1.6rem, 2.6vw, 2rem); font-weight: 700; margin-bottom: 1.4
   padding: 1rem 0 .5rem;
 }
 .nav {
+  position: relative; z-index: 61; /* stays above the mobile drawer (z-index 60) so the toggle button is still clickable to close it */
   width: min(1560px, 95vw); margin-inline: auto;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
   padding: .55rem .75rem .55rem .55rem;
@@ -630,23 +633,30 @@ h2 { font-size: clamp(1.6rem, 2.6vw, 2rem); font-weight: 700; margin-bottom: 1.4
   .nav-toggle { display: flex; }
   /* the desktop inline list hides completely; the separate drawer list
      (outside <nav>'s backdrop-filter, see the HTML comment by it) takes
-     over, sliding in from the right over the page. Kept in the flow as
-     display:flex always so the transform can animate it, hidden via
-     translateX + a delayed visibility so it's not tabbable while closed */
+     over, sliding in from the right over the page. Animated via width +
+     horizontal padding (not transform) and pinned flush to right:0 at
+     every step, so its box never extends past the right edge of the
+     viewport — a transform-based slide leaves the pre-transform box
+     poking out past the edge, which some engines still count toward
+     the page's scrollable width even though it's invisible */
   #navLinks { display: none; }
   .nav-links.nav-links--drawer {
     display: flex;
     position: fixed; top: 0; right: 0; bottom: 0; z-index: 60;
-    width: min(280px, 78vw); margin: 0;
+    width: 0; margin: 0; overflow: hidden;
     flex-direction: column; align-items: stretch; gap: .3rem;
-    padding: 6.5rem 1.4rem 2rem;
+    padding: 6.5rem 0 2rem;
     background: var(--surface-glass); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
-    border-radius: 0; border-left: 1px solid var(--border); box-shadow: var(--shadow-lg);
-    transform: translateX(100%); visibility: hidden;
-    transition: transform .4s var(--ease), visibility 0s linear .4s;
+    border-radius: 0; box-shadow: var(--shadow-lg);
+    visibility: hidden;
+    transition: width .4s var(--ease), padding-inline .4s var(--ease), visibility 0s linear .4s;
   }
-  .nav-links.nav-links--drawer.open { transform: translateX(0); visibility: visible; transition: transform .4s var(--ease); }
-  .nav-links.nav-links--drawer a { display: block; }
+  .nav-links.nav-links--drawer.open {
+    width: min(280px, 78vw); padding-inline: 1.4rem; visibility: visible;
+    border-left: 1px solid var(--border);
+    transition: width .4s var(--ease), padding-inline .4s var(--ease);
+  }
+  .nav-links.nav-links--drawer a { display: block; white-space: nowrap; }
   .nav-backdrop {
     position: fixed; inset: 0; z-index: 55;
     background: rgba(10, 15, 30, .45); backdrop-filter: blur(2px);
