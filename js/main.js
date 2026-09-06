@@ -124,7 +124,7 @@ const I18N = {
     "awards.4": "Cisco Networking Academy — Introduction to Networks",
     "awards.5": "Cisco Networking Academy — Switching, Routing, and Wireless Essentials",
     "awards.6": "Best Research Assistant in Virtual Reality (2026)",
-    "awards.7": "Coming Soon",
+    "awards.7": "MICRO1 - Freelancer AI Trainer",
     "contact.title": "Contact Me", "backTop": "Back to top",
   },
   es: {
