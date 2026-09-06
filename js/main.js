@@ -46,6 +46,9 @@ const PROJECT_PAGES = {
   7: { title: "Psychological Monitor, USAR-COL 13", link: "project-psychmonitor.html" },
   8: { title: "USS Sello Editorial, University Book Publishing & Sales Platform", link: "project-usssello.html" },
   9: { title: "Literary Manager, Relational Database Design", link: "project-literarydb.html" },
+  10: { title: "Bomberman, Game with MVC Design Pattern", link: "project-bomberman.html" },
+  11: { title: "Medical Appointment Management System with FIFO and LIFO Data Structure", link: "project-citasmedicas.html" },
+  12: { title: "Sales and Vehicle Cost Management with MVC Pattern", link: "project-vehiculos.html" },
 };
 const PROJECTS = PROJECT_TAGS.map((tags, i) => ({
   title: PROJECT_PAGES[i]?.title ?? "Grow, Organic & Healthy Food",
