@@ -601,12 +601,16 @@ body.theme-colombia .btn-green { background: linear-gradient(135deg, var(--brand
   font-size: .8rem; font-weight: 600; color: var(--text-soft);
   transition: transform .3s var(--ease);
 }
-.project-figma-badge:hover, .project-ux-badge:hover { transform: translateY(-4px) scale(1.1); }
+.project-figma-badge:hover, .project-ux-badge:hover { transform: translateY(-4px) scale(1.16); }
 .project-figma-badge img {
   width: 44px; height: 44px; border-radius: 10px;
   transition: box-shadow .3s var(--ease);
 }
-.project-figma-badge:hover img { box-shadow: 0 0 26px 8px rgba(255, 214, 102, .55); }
+.project-figma-badge:hover img { box-shadow: 0 0 32px 10px rgba(96, 165, 250, .65); }
+/* the "Problem" badge reuses the UX icon markup (a span, not an img)
+   inside a project-figma-badge wrapper, so it needs its own hover rule
+   to get the same glow as every other tool/link badge. */
+.project-figma-badge:hover .project-ux-icon { box-shadow: 0 0 32px 10px rgba(96, 165, 250, .65); }
 /* the GitHub mark is drawn white (fill="#ffffff") inside its own svg, so
    it's invisible on the light theme's light background — invert it there
    (white → black) and leave it alone in dark mode, where it's already
@@ -646,12 +650,24 @@ body.theme-coffeetour .project-figma-badge img {
   content: ""; position: absolute; inset: 0; border-radius: inherit;
   pointer-events: none; animation: uxPulse 2.2s ease-out infinite;
 }
-.project-ux-badge:hover .project-ux-icon { box-shadow: 0 0 26px 8px rgba(255, 214, 102, .55); }
+.project-ux-badge:hover .project-ux-icon { box-shadow: 0 0 32px 10px rgba(96, 165, 250, .65); }
 .project-ux-icon svg { width: 22px; height: 22px; }
 @keyframes uxPulse {
   0%   { box-shadow: 0 0 0 0 rgba(0,0,0,.28); }
   70%  { box-shadow: 0 0 0 12px rgba(0,0,0,0); }
   100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); }
+}
+/* the pulse ring is black, so it disappears against the dark theme's
+   dark background — use a white ring there so the same call-to-action
+   effect that's visible in light mode is visible in dark mode too. */
+[data-theme="dark"] .project-ux-icon::after,
+[data-theme="dark"] .project-figma-badge--pulse::after {
+  animation-name: uxPulseDark;
+}
+@keyframes uxPulseDark {
+  0%   { box-shadow: 0 0 0 0 rgba(255,255,255,.35); }
+  70%  { box-shadow: 0 0 0 12px rgba(255,255,255,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
 }
 @media (prefers-reduced-motion: reduce) {
   .project-ux-icon::after, .project-figma-badge--pulse::after { animation: none; }
