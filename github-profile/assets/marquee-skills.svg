@@ -1,0 +1,186 @@
+<svg width="1200" height="100" viewBox="0 0 1200 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scrolling skills marquee">
+  <defs>
+    <clipPath id="clip"><rect x="0" y="0" width="1200" height="100" rx="20"/></clipPath>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0f1522" stop-opacity="1"/>
+      <stop offset="6%" stop-color="#0f1522" stop-opacity="0"/>
+      <stop offset="94%" stop-color="#0f1522" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0f1522" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="edgeMask">
+      <rect x="0" y="0" width="1200" height="100" fill="white"/>
+      <rect x="0" y="0" width="1200" height="100" fill="url(#fade)" opacity=".9"/>
+    </mask>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="1200" height="100" fill="#0f1522"/>
+    <rect x="1" y="1" width="1198" height="98" rx="19" fill="none" stroke="#5a8bd6" stroke-opacity=".25"/>
+    <g mask="url(#edgeMask)">
+      <g>
+        
+    <g>
+      <rect x="40.0" y="28.0" width="107.0" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="66.0" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="82.0" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">FIGMA</text>
+    </g>
+    <g>
+      <rect x="165.0" y="28.0" width="132.8" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="191.0" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="207.0" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">ADOBE XD</text>
+    </g>
+    <g>
+      <rect x="315.8" y="28.0" width="158.6" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="341.8" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="357.8" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">ILLUSTRATOR</text>
+    </g>
+    <g>
+      <rect x="492.4" y="28.0" width="141.4" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="518.4" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="534.4" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">PHOTOSHOP</text>
+    </g>
+    <g>
+      <rect x="651.8" y="28.0" width="132.8" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="677.8" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="693.8" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">INDESIGN</text>
+    </g>
+    <g>
+      <rect x="802.6" y="28.0" width="107.0" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="828.6" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="844.6" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">HTML5</text>
+    </g>
+    <g>
+      <rect x="927.6" y="28.0" width="98.4" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="953.6" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="969.6" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">CSS3</text>
+    </g>
+    <g>
+      <rect x="1044.0" y="28.0" width="150.0" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="1070.0" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="1086.0" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">JAVASCRIPT</text>
+    </g>
+    <g>
+      <rect x="1212.0" y="28.0" width="98.4" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="1238.0" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="1254.0" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">JAVA</text>
+    </g>
+    <g>
+      <rect x="1328.4" y="28.0" width="115.6" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="1354.4" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="1370.4" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">PYTHON</text>
+    </g>
+    <g>
+      <rect x="1462.0" y="28.0" width="124.2" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="1488.0" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="1504.0" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">NODE.JS</text>
+    </g>
+    <g>
+      <rect x="1604.2" y="28.0" width="150.0" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="1630.2" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="1646.2" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">POSTGRESQL</text>
+    </g>
+    <g>
+      <rect x="1772.2" y="28.0" width="115.6" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="1798.2" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="1814.2" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">DOCKER</text>
+    </g>
+    <g>
+      <rect x="1905.8" y="28.0" width="98.4" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="1931.8" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="1947.8" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">JSON</text>
+    </g>
+    <g>
+      <rect x="2022.2" y="28.0" width="89.8" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="2048.2" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="2064.2" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">SQL</text>
+    </g>
+    <g>
+      <rect x="2130.0" y="28.0" width="107.0" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="2156.0" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="2172.0" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">BREVO</text>
+    </g>
+        
+    <g>
+      <rect x="2295.0" y="28.0" width="107.0" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="2321.0" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="2337.0" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">FIGMA</text>
+    </g>
+    <g>
+      <rect x="2420.0" y="28.0" width="132.8" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="2446.0" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="2462.0" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">ADOBE XD</text>
+    </g>
+    <g>
+      <rect x="2570.8" y="28.0" width="158.6" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="2596.8" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="2612.8" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">ILLUSTRATOR</text>
+    </g>
+    <g>
+      <rect x="2747.4" y="28.0" width="141.4" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="2773.4" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="2789.4" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">PHOTOSHOP</text>
+    </g>
+    <g>
+      <rect x="2906.8" y="28.0" width="132.8" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="2932.8" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="2948.8" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">INDESIGN</text>
+    </g>
+    <g>
+      <rect x="3057.6" y="28.0" width="107.0" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="3083.6" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="3099.6" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">HTML5</text>
+    </g>
+    <g>
+      <rect x="3182.6" y="28.0" width="98.4" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="3208.6" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="3224.6" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">CSS3</text>
+    </g>
+    <g>
+      <rect x="3299.0" y="28.0" width="150.0" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="3325.0" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="3341.0" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">JAVASCRIPT</text>
+    </g>
+    <g>
+      <rect x="3467.0" y="28.0" width="98.4" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="3493.0" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="3509.0" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">JAVA</text>
+    </g>
+    <g>
+      <rect x="3583.4" y="28.0" width="115.6" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="3609.4" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="3625.4" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">PYTHON</text>
+    </g>
+    <g>
+      <rect x="3717.0" y="28.0" width="124.2" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="3743.0" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="3759.0" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">NODE.JS</text>
+    </g>
+    <g>
+      <rect x="3859.2" y="28.0" width="150.0" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="3885.2" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="3901.2" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">POSTGRESQL</text>
+    </g>
+    <g>
+      <rect x="4027.2" y="28.0" width="115.6" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="4053.2" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="4069.2" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">DOCKER</text>
+    </g>
+    <g>
+      <rect x="4160.8" y="28.0" width="98.4" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="4186.8" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="4202.8" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">JSON</text>
+    </g>
+    <g>
+      <rect x="4277.2" y="28.0" width="89.8" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="4303.2" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="4319.2" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">SQL</text>
+    </g>
+    <g>
+      <rect x="4385.0" y="28.0" width="107.0" height="44" rx="22" fill="#1a2335" fill-opacity=".72" stroke="#5a8bd6" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="4411.0" cy="50.0" r="4" fill="#5a8bd6"/>
+      <text x="4427.0" y="55.0" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="1" fill="#dbe6fb">BREVO</text>
+    </g>
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="-2255,0" dur="41s" repeatCount="indefinite"/>
+      </g>
+    </g>
+  </g>
+</svg>

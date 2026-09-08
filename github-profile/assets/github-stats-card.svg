@@ -1,0 +1,63 @@
+<svg width="1200" height="270" viewBox="0 0 1200 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub stats and top languages">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#141c2c"/>
+      <stop offset="100%" stop-color="#1a2335"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="90%" cy="15%" r="55%">
+      <stop offset="0%" stop-color="#5a8bd6" stop-opacity=".14"/>
+      <stop offset="100%" stop-color="#5a8bd6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="1" y="1" width="1198" height="268" rx="22" fill="url(#bg)" stroke="#5a8bd6" stroke-opacity=".3" stroke-width="1.4"/>
+  <rect x="1" y="1" width="1198" height="268" rx="22" fill="url(#glow)"/>
+
+  <text x="40" y="42" font-family="Consolas, 'Courier New', monospace" font-size="14" letter-spacing="2" fill="#9fc0f0">◆ GITHUB STATS</text>
+  <text x="1160" y="42" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="12.5" letter-spacing="1.5" fill="#7fa4e0" fill-opacity=".8">@iCastro117 · SINCE 2022</text>
+  <line x1="40" y1="56" x2="1160" y2="56" stroke="#5a8bd6" stroke-opacity=".18"/>
+
+  <!-- left: key numbers -->
+  <g text-anchor="middle">
+    <text x="150" y="118" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="42" fill="#8fb4ee">44</text>
+    <text x="150" y="144" font-family="Consolas, monospace" font-size="12" letter-spacing="1" fill="#9fc0f0">PUBLIC REPOS</text>
+
+    <text x="330" y="118" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="42" fill="#8fb4ee">22</text>
+    <text x="330" y="144" font-family="Consolas, monospace" font-size="12" letter-spacing="1" fill="#9fc0f0">CASE STUDIES</text>
+
+    <text x="510" y="118" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="42" fill="#8fb4ee">+3</text>
+    <text x="510" y="144" font-family="Consolas, monospace" font-size="12" letter-spacing="1" fill="#9fc0f0">YEARS ACTIVE</text>
+  </g>
+  <line x1="40" y1="176" x2="600" y2="176" stroke="#5a8bd6" stroke-opacity=".18"/>
+  <text x="40" y="210" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#dbe6fb">Backend-leaning stack day to day, shipped with a UX/UI-designer's eye —</text>
+  <text x="40" y="232" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#dbe6fb">most repos pair Java coursework projects with front-end case studies.</text>
+
+  <line x1="640" y1="72" x2="640" y2="252" stroke="#5a8bd6" stroke-opacity=".18"/>
+
+  <!-- right: top languages by repo count -->
+  <text x="676" y="82" font-family="Consolas, monospace" font-size="12" letter-spacing="1.5" fill="#9fc0f0">TOP LANGUAGES · BY REPO</text>
+
+  <!-- stacked bar: Java 51%, HTML 16%, JavaScript 11%, Python 11%, Other 11% -->
+  <g>
+    <rect x="676" y="96" width="484" height="14" rx="7" fill="#0f1522"/>
+    <rect x="676" y="96" width="247" height="14" fill="#f89820"/>
+    <rect x="923" y="96" width="77" height="14" fill="#e34f26"/>
+    <rect x="1000" y="96" width="53" height="14" fill="#f0db4f"/>
+    <rect x="1053" y="96" width="53" height="14" fill="#3776ab"/>
+    <rect x="1106" y="96" width="53" height="14" rx="7" fill="#5a8bd6" fill-opacity=".5"/>
+    <rect x="676" y="96" width="14" height="14" rx="7" fill="#f89820"/>
+  </g>
+
+  <g font-family="Consolas, monospace" font-size="12.5" fill="#dbe6fb">
+    <circle cx="682" cy="134" r="4" fill="#f89820"/>
+    <text x="694" y="138">Java — 51%</text>
+    <circle cx="682" cy="160" r="4" fill="#e34f26"/>
+    <text x="694" y="164">HTML — 16%</text>
+    <circle cx="682" cy="186" r="4" fill="#f0db4f"/>
+    <text x="694" y="190">JavaScript — 11%</text>
+    <circle cx="850" cy="134" r="4" fill="#3776ab"/>
+    <text x="862" y="138">Python — 11%</text>
+    <circle cx="850" cy="160" r="4" fill="#5a8bd6" fill-opacity=".7"/>
+    <text x="862" y="164">CSS · C# · PHP · TS — 11%</text>
+  </g>
+</svg>

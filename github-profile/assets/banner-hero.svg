@@ -1,0 +1,80 @@
+<svg width="1200" height="340" viewBox="0 0 1200 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Isabella Castro Camacho — UX/UI Designer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f1522"/>
+      <stop offset="55%" stop-color="#141c2c"/>
+      <stop offset="100%" stop-color="#1a2335"/>
+    </linearGradient>
+    <radialGradient id="glowSpot1" cx="82%" cy="18%" r="42%">
+      <stop offset="0%" stop-color="#5a8bd6" stop-opacity=".35"/>
+      <stop offset="100%" stop-color="#5a8bd6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowSpot2" cx="10%" cy="85%" r="38%">
+      <stop offset="0%" stop-color="#3f6fb5" stop-opacity=".30"/>
+      <stop offset="100%" stop-color="#3f6fb5" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blurBlob" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="textGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="clip"><rect x="0" y="0" width="1200" height="340" rx="26"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <rect width="1200" height="340" fill="url(#bg)"/>
+    <rect width="1200" height="340" fill="url(#glowSpot1)"/>
+    <rect width="1200" height="340" fill="url(#glowSpot2)"/>
+
+    <!-- drifting glass blobs, pulsing softly forever -->
+    <circle cx="1040" cy="70" r="90" fill="#5a8bd6" opacity=".16" filter="url(#blurBlob)">
+      <animate attributeName="opacity" values=".10;.22;.10" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="120" cy="270" r="110" fill="#3f6fb5" opacity=".14" filter="url(#blurBlob)">
+      <animate attributeName="opacity" values=".08;.18;.08" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="620" cy="30" r="46" fill="#8fb4ee" opacity=".14" filter="url(#blurBlob)">
+      <animate attributeName="opacity" values=".08;.16;.08" dur="5s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- hairline border, glass card feel -->
+    <rect x="1.5" y="1.5" width="1197" height="337" rx="24.5" fill="none" stroke="#5a8bd6" stroke-opacity=".28" stroke-width="1.5"/>
+
+    <!-- corner id tags, echo the site's tech/UX aesthetic -->
+    <g font-family="Consolas, 'Courier New', monospace" font-size="12.5" letter-spacing="1.6" fill="#7fa4e0" fill-opacity=".85">
+      <text x="46" y="46">◆ UX/UI · SYSTEMS ENGINEERING</text>
+      <text x="1154" y="46" text-anchor="end">BOGOTÁ D.C. · CO</text>
+    </g>
+    <line x1="46" y1="60" x2="1154" y2="60" stroke="#5a8bd6" stroke-opacity=".18" stroke-width="1"/>
+
+    <!-- name, glowing -->
+    <text x="600" y="182" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="66" fill="#5a8bd6" fill-opacity=".55" filter="url(#textGlow)">Isabella Castro Camacho</text>
+    <text x="600" y="182" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="66" fill="#f4f7ff">Isabella Castro Camacho</text>
+
+    <!-- role line -->
+    <text x="600" y="222" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="17" letter-spacing="3" fill="#9fc0f0">UX/UI DESIGNER  ◆  SYSTEMS ENGINEER  ◆  AI TRAINER</text>
+
+    <!-- tagline, mirrors the site's two-tone hero copy -->
+    <text x="600" y="266" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#dbe6fb">
+      <tspan font-style="italic" fill-opacity=".8">It's not how</tspan>
+      <tspan font-weight="800" letter-spacing="1"> IT LOOKS</tspan>
+      <tspan fill-opacity=".6">   ·   </tspan>
+      <tspan font-style="italic" fill-opacity=".8">It's how</tspan>
+      <tspan font-weight="800" letter-spacing="1"> IT WORKS</tspan>
+    </text>
+
+    <line x1="500" y1="288" x2="700" y2="288" stroke="#5a8bd6" stroke-opacity=".4" stroke-width="1.5"/>
+    <text x="600" y="312" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="12.5" letter-spacing="1.4" fill="#7fa4e0" fill-opacity=".85">FUNDACIÓN UNIVERSITARIA KONRAD LORENZ</text>
+
+    <!-- corner brackets, decorative -->
+    <g stroke="#5a8bd6" stroke-opacity=".45" stroke-width="2" fill="none">
+      <path d="M40 300 v20 h20"/>
+      <path d="M1160 300 v20 h-20"/>
+    </g>
+  </g>
+</svg>

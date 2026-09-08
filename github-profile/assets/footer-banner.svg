@@ -1,0 +1,29 @@
+<svg width="1200" height="170" viewBox="0 0 1200 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Isabella Castro Camacho — thanks for scrolling">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f1522"/>
+      <stop offset="100%" stop-color="#1a2335"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="#5a8bd6" stop-opacity=".22"/>
+      <stop offset="100%" stop-color="#5a8bd6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="textGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="1" y="1" width="1198" height="168" rx="22" fill="url(#bg)" stroke="#5a8bd6" stroke-opacity=".3" stroke-width="1.4"/>
+  <rect x="1" y="1" width="1198" height="168" rx="22" fill="url(#glow)">
+    <animate attributeName="opacity" values=".6;1;.6" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <circle cx="600" cy="50" r="14" fill="none" stroke="#5a8bd6" stroke-width="2"/>
+  <circle cx="600" cy="50" r="4" fill="#5a8bd6"/>
+
+  <text x="600" y="102" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="30" fill="#5a8bd6" fill-opacity=".5" filter="url(#textGlow)">Isabella Castro Camacho</text>
+  <text x="600" y="102" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="30" fill="#f4f7ff">Isabella Castro Camacho</text>
+
+  <text x="600" y="132" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="13" letter-spacing="3" fill="#9fc0f0">◆ THANKS FOR SCROLLING ◆</text>
+</svg>

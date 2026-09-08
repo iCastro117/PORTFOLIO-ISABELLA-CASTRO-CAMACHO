@@ -1,0 +1,66 @@
+<svg width="1200" height="84" viewBox="0 0 1200 84" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PORTFOLIO marquee">
+  <defs>
+    <clipPath id="clip"><rect x="0" y="0" width="1200" height="84" rx="18"/></clipPath>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0f1522" stop-opacity="1"/>
+      <stop offset="6%" stop-color="#0f1522" stop-opacity="0"/>
+      <stop offset="94%" stop-color="#0f1522" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0f1522" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="edgeMask">
+      <rect x="0" y="0" width="1200" height="84" fill="white"/>
+      <rect x="0" y="0" width="1200" height="84" fill="url(#fade)" opacity=".9"/>
+    </mask>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="1200" height="84" fill="#0f1522"/>
+    <rect x="1" y="1" width="1198" height="82" rx="17" fill="none" stroke="#5a8bd6" stroke-opacity=".25"/>
+    <g mask="url(#edgeMask)">
+      <g>
+        
+    <text x="40.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#5a8bd6" fill-opacity=".45" filter="url(#glow)">PORTFOLIO</text>
+    <text x="40.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#eef1f7">PORTFOLIO</text>
+    <text x="345.0" y="52.0" font-family="Arial" font-size="22" fill="#5a8bd6" fill-opacity=".6">&#9670;</text>
+    <text x="380.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#5a8bd6" fill-opacity=".45" filter="url(#glow)">PORTFOLIO</text>
+    <text x="380.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#eef1f7">PORTFOLIO</text>
+    <text x="685.0" y="52.0" font-family="Arial" font-size="22" fill="#5a8bd6" fill-opacity=".6">&#9670;</text>
+    <text x="720.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#5a8bd6" fill-opacity=".45" filter="url(#glow)">PORTFOLIO</text>
+    <text x="720.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#eef1f7">PORTFOLIO</text>
+    <text x="1025.0" y="52.0" font-family="Arial" font-size="22" fill="#5a8bd6" fill-opacity=".6">&#9670;</text>
+    <text x="1060.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#5a8bd6" fill-opacity=".45" filter="url(#glow)">PORTFOLIO</text>
+    <text x="1060.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#eef1f7">PORTFOLIO</text>
+    <text x="1365.0" y="52.0" font-family="Arial" font-size="22" fill="#5a8bd6" fill-opacity=".6">&#9670;</text>
+    <text x="1400.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#5a8bd6" fill-opacity=".45" filter="url(#glow)">PORTFOLIO</text>
+    <text x="1400.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#eef1f7">PORTFOLIO</text>
+    <text x="1705.0" y="52.0" font-family="Arial" font-size="22" fill="#5a8bd6" fill-opacity=".6">&#9670;</text>
+    <text x="1740.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#5a8bd6" fill-opacity=".45" filter="url(#glow)">PORTFOLIO</text>
+    <text x="1740.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#eef1f7">PORTFOLIO</text>
+    <text x="2045.0" y="52.0" font-family="Arial" font-size="22" fill="#5a8bd6" fill-opacity=".6">&#9670;</text>
+        
+    <text x="2080.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#5a8bd6" fill-opacity=".45" filter="url(#glow)">PORTFOLIO</text>
+    <text x="2080.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#eef1f7">PORTFOLIO</text>
+    <text x="2385.0" y="52.0" font-family="Arial" font-size="22" fill="#5a8bd6" fill-opacity=".6">&#9670;</text>
+    <text x="2420.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#5a8bd6" fill-opacity=".45" filter="url(#glow)">PORTFOLIO</text>
+    <text x="2420.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#eef1f7">PORTFOLIO</text>
+    <text x="2725.0" y="52.0" font-family="Arial" font-size="22" fill="#5a8bd6" fill-opacity=".6">&#9670;</text>
+    <text x="2760.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#5a8bd6" fill-opacity=".45" filter="url(#glow)">PORTFOLIO</text>
+    <text x="2760.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#eef1f7">PORTFOLIO</text>
+    <text x="3065.0" y="52.0" font-family="Arial" font-size="22" fill="#5a8bd6" fill-opacity=".6">&#9670;</text>
+    <text x="3100.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#5a8bd6" fill-opacity=".45" filter="url(#glow)">PORTFOLIO</text>
+    <text x="3100.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#eef1f7">PORTFOLIO</text>
+    <text x="3405.0" y="52.0" font-family="Arial" font-size="22" fill="#5a8bd6" fill-opacity=".6">&#9670;</text>
+    <text x="3440.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#5a8bd6" fill-opacity=".45" filter="url(#glow)">PORTFOLIO</text>
+    <text x="3440.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#eef1f7">PORTFOLIO</text>
+    <text x="3745.0" y="52.0" font-family="Arial" font-size="22" fill="#5a8bd6" fill-opacity=".6">&#9670;</text>
+    <text x="3780.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#5a8bd6" fill-opacity=".45" filter="url(#glow)">PORTFOLIO</text>
+    <text x="3780.0" y="54.0" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2" fill="#eef1f7">PORTFOLIO</text>
+    <text x="4085.0" y="52.0" font-family="Arial" font-size="22" fill="#5a8bd6" fill-opacity=".6">&#9670;</text>
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="-2040,0" dur="34s" repeatCount="indefinite"/>
+      </g>
+    </g>
+  </g>
+</svg>
