@@ -219,7 +219,6 @@ function applyLang(l) {
     if (I18N[l][key] !== undefined) el.innerHTML = I18N[l][key];
   });
   $("#langBtn").title = l === "en" ? "Cambiar a español" : "Switch to English";
-  if (typeof currentExpTab !== "undefined") renderTimeline(currentExpTab);
 }
 $("#langBtn").addEventListener("click", () => applyLang(lang === "en" ? "es" : "en"));
 applyLang(lang);
@@ -315,10 +314,10 @@ function initials(name) {
 }
 function renderTimeline(key) {
   timeline.innerHTML = EXPERIENCE[key].map((x) => {
-    const role = lang === "es" ? (x.roleEs || x.role) : x.role;
-    const sub = lang === "es" ? (x.subEs || x.sub) : x.sub;
-    const org = lang === "es" ? (x.orgEs || x.org) : x.org;
-    const inst = lang === "es" ? (x.instEs || x.inst) : x.inst;
+    const role = (lang === "es" && x.roleEs) || x.role;
+    const sub  = (lang === "es" && x.subEs)  || x.sub;
+    const org  = (lang === "es" && x.orgEs)  || x.org;
+    const inst = (lang === "es" && x.instEs) || x.inst;
     return `
     <div class="tl-item">
       <span class="tl-marker">
@@ -355,6 +354,9 @@ $("#expTabs").addEventListener("click", (e) => {
   renderTimeline(t.dataset.tab);
 });
 renderTimeline("ux");
+// the cards are built dynamically, so applyLang()'s [data-i18n] sweep misses
+// them — rebuild the active tab whenever the language toggles
+$("#langBtn").addEventListener("click", () => renderTimeline(currentExpTab));
 
 /* ---------- Awards carousel + lightbox ---------- */
 const awardGrid = $("#awardGrid");
