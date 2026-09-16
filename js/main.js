@@ -209,6 +209,7 @@ $("#themeBtn").addEventListener("click", () => {
 
 /* ---------- Language ---------- */
 let lang = localStorage.getItem("lang") || "en";
+let currentExpTab = "ux";
 function applyLang(l) {
   lang = l;
   root.lang = l;
@@ -346,7 +347,6 @@ function renderTimeline(key) {
     });
   });
 }
-let currentExpTab = "ux";
 $("#expTabs").addEventListener("click", (e) => {
   const t = e.target.closest(".tab");
   if (!t) return;
