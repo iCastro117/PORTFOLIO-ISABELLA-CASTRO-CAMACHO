@@ -74,26 +74,26 @@ function buildProjects() {
 
 const EXPERIENCE = {
   ux: [
-    { logo: "assets/logos/ux/logo1.png", date: "2026", role: "Research Assistant · Delfín Program", sub: "UX design + front-end for a university e-commerce", org: "Señor de Sipán University (Peru)", inst: "Remote from Colombia", tags: ["Figma", "HTML", "CSS", "Node.js", "SRS docs", "SCRUM"] },
-    { logo: "assets/logos/ux/logo2.png", date: "2024 — Present", role: "Freelance UX/UI Designer", sub: "End-to-end product & interface design", org: "Independent", inst: "Remote", tags: ["Figma", "Prototyping", "Design systems", "User research"] },
+    { logo: "assets/logos/ux/logo1.png", date: "2026", role: "Research Assistant · Delfín Program", roleEs: "Asistente de Investigación · Programa Delfín", sub: "UX design + front-end for a university e-commerce", subEs: "Diseño UX + front-end para un e-commerce universitario", org: "Señor de Sipán University (Peru)", orgEs: "Universidad Fundación Señor de Sipán (Perú)", inst: "Remote from Colombia", instEs: "Remoto desde Colombia", tags: ["Figma", "HTML", "CSS", "Node.js", "SRS docs", "SCRUM"] },
+    { logo: "assets/logos/ux/logo2.png", date: "2024 — Present", role: "Freelance UX/UI Designer", roleEs: "Diseñadora UX/UI Freelance", sub: "End-to-end product & interface design", subEs: "Diseño integral de productos e interfaces", org: "Independent", orgEs: "Independiente", inst: "Remote", instEs: "Remoto", tags: ["Figma", "Prototyping", "Design systems", "User research"] },
   ],
   llm: [
-    { logo: "assets/logos/ai-trainer/logo1.png", date: "2026", role: "AI Trainer · Video Robot Evaluation", sub: "Paired rollout comparison against quality rubrics", org: "Micro1", inst: "Remote", tags: ["Video evaluation", "Physical plausibility", "Cross-camera QA", "Annotation"] },
-    { logo: "assets/logos/ai-trainer/logo2.png", date: "2026", role: "AI Trainer · Code Response Verifier", sub: "Labeling AI answers for coding tasks", org: "Alignerr", inst: "Remote", tags: ["Code evaluation", "Reasoning quality", "Instruction adherence"] },
-    { logo: "assets/logos/ai-trainer/logo3.png", date: "2026", role: "AI Trainer · Video Annotation", sub: "Events, timestamps and multi-level descriptions", org: "Crossing Hurdles", inst: "Remote", tags: ["Video annotation", "Timestamps", "Computer vision", "Multimodal"] },
-    { logo: "assets/logos/ai-trainer/logo4.png", date: "2026", role: "AI Trainer · Data Input & Audio Verifier", sub: "Comparing and ranking model responses", org: "T-Maxx", inst: "Remote", tags: ["Prompt analysis", "Response ranking", "Guidelines"] },
-    { logo: "assets/logos/ai-trainer/logo5.png", date: "2025", role: "AI Trainer · Audio Data Annotator", sub: "Cardamom Project — LLM & speech", org: "DataForce by TransPerfect", inst: "Remote", tags: ["LatAm Spanish", "Voice & tone", "Noise detection"] },
+    { logo: "assets/logos/ai-trainer/logo1.png", date: "2026", role: "AI Trainer · Video Robot Evaluation", roleEs: "Entrenador de IA · Evaluación de Robot de Video", sub: "Paired rollout comparison against quality rubrics", subEs: "Comparación de despliegues emparejados con rúbricas de calidad", org: "Micro1", orgEs: "Micro1", inst: "Remote", instEs: "Remoto", tags: ["Video evaluation", "Physical plausibility", "Cross-camera QA", "Annotation"] },
+    { logo: "assets/logos/ai-trainer/logo2.png", date: "2026", role: "AI Trainer · Code Response Verifier", roleEs: "Entrenador de IA · Verificador de Respuestas de Código", sub: "Labeling AI answers for coding tasks", subEs: "Etiquetado de respuestas de IA para tareas de codificación", org: "Alignerr", orgEs: "Alignerr", inst: "Remote", instEs: "Remoto", tags: ["Code evaluation", "Reasoning quality", "Instruction adherence"] },
+    { logo: "assets/logos/ai-trainer/logo3.png", date: "2026", role: "AI Trainer · Video Annotation", roleEs: "Entrenador de IA · Anotación de Video", sub: "Events, timestamps and multi-level descriptions", subEs: "Eventos, marcas de tiempo y descripciones multinivel", org: "Crossing Hurdles", orgEs: "Crossing Hurdles", inst: "Remote", instEs: "Remoto", tags: ["Video annotation", "Timestamps", "Computer vision", "Multimodal"] },
+    { logo: "assets/logos/ai-trainer/logo4.png", date: "2026", role: "AI Trainer · Data Input & Audio Verifier", roleEs: "Entrenador de IA · Verificador de Datos de Audio", sub: "Comparing and ranking model responses", subEs: "Comparación y clasificación de respuestas de modelos", org: "T-Maxx", orgEs: "T-Maxx", inst: "Remote", instEs: "Remoto", tags: ["Prompt analysis", "Response ranking", "Guidelines"] },
+    { logo: "assets/logos/ai-trainer/logo5.png", date: "2025", role: "AI Trainer · Audio Data Annotator", roleEs: "Entrenador de IA · Anotador de Datos de Audio", sub: "Cardamom Project — LLM & speech", subEs: "Proyecto Cardamom — LLM y voz", org: "DataForce by TransPerfect", orgEs: "DataForce por TransPerfect", inst: "Remote", instEs: "Remoto", tags: ["LatAm Spanish", "Voice & tone", "Noise detection"] },
   ],
   data: [
-    { logo: "assets/logos/data-entry/logo1.png", date: "2026", role: "Medical & Multilingual Data Entry Specialist", sub: "Records digitization and CRM data", org: "The Language Doctors", inst: "Remote", tags: ["Word & Excel", "CRM", "EN · ES · IT · DE", "Confidentiality"] },
-    { logo: "assets/logos/data-entry/logo2.png", date: "2026", role: "Data Entry Assistant & Business Research", sub: "Company data from international registries", org: "Global Advance", inst: "Remote", tags: ["Public registries", "Databases", "Data QC"] },
+    { logo: "assets/logos/data-entry/logo1.png", date: "2026", role: "Medical & Multilingual Data Entry Specialist", roleEs: "Especialista en Entrada de Datos Médicos y Multilingües", sub: "Records digitization and CRM data", subEs: "Digitalización de registros y datos CRM", org: "The Language Doctors", orgEs: "The Language Doctors", inst: "Remote", instEs: "Remoto", tags: ["Word & Excel", "CRM", "EN · ES · IT · DE", "Confidentiality"] },
+    { logo: "assets/logos/data-entry/logo2.png", date: "2026", role: "Data Entry Assistant & Business Research", roleEs: "Asistente de Entrada de Datos e Investigación Empresarial", sub: "Company data from international registries", subEs: "Datos de empresas de registros internacionales", org: "Global Advance", orgEs: "Global Advance", inst: "Remote", instEs: "Remoto", tags: ["Public registries", "Databases", "Data QC"] },
   ],
   qa: [
-    { logo: "assets/logos/qa/logo1.png", date: "December 2025", role: "QA Reviewer & Data Annotator", sub: "100+ audio annotation tasks reviewed per day", org: "DataForce by TransPerfect", inst: "Remote", tags: ["Transcription QA", "Formatting rules", "Written feedback"] },
+    { logo: "assets/logos/qa/logo1.png", date: "December 2025", role: "QA Reviewer & Data Annotator", roleEs: "Revisor QA y Anotador de Datos", sub: "100+ audio annotation tasks reviewed per day", subEs: "100+ tareas de anotación de audio revisadas por día", org: "DataForce by TransPerfect", orgEs: "DataForce por TransPerfect", inst: "Remote", instEs: "Remoto", tags: ["Transcription QA", "Formatting rules", "Written feedback"] },
   ],
 };
 
-const AWARDS = Array.from({ length: 8 }, (_, i) => ({
+const AWARDS = Array.from({ length: 9 }, (_, i) => ({
   img: `assets/awards/award${i + 1}.png`,
   key: `awards.${i}`,                    // caption text lives in I18N, see below
 }));
@@ -115,7 +115,7 @@ const I18N = {
     "edu.0.t": "Bachelor´s in Systems Engineering", "edu.1.t": "Associate in Audiovisual Graphic Media",
     "tools.eyebrow": "TOOLS & SKILLS", "tools.languages": "Languages", "tools.spanish": "Spanish", "tools.english": "English", "tools.korean": "Korean", "tools.french": "French",
     "projects.eyebrow": "FEATURE PROJECTS", "projects.title": "Selected Work",
-    "exp.eyebrow": "BACKGROUND", "exp.title": "Experience",
+    "exp.eyebrow": "BACKGROUND", "exp.title": "Experience", "exp.ux": "UX/UI Design", "exp.llm": "LLM & LMM", "exp.data": "Data Entry", "exp.qa": "QA",
     "awards.eyebrow": "Along the way", "awards.title": "Awards",
     "awards.0": "Honor Mention for Best GPA — School of Systems Engineering (2025-1)",
     "awards.1": "Honor Mention for Best GPA — School of Systems Engineering (2025-2)",
@@ -125,6 +125,7 @@ const I18N = {
     "awards.5": "Cisco Networking Academy — Switching, Routing, and Wireless Essentials",
     "awards.6": "Best Research Assistant in Virtual Reality (2026)",
     "awards.7": "MICRO1 - Freelancer AI Trainer",
+    "awards.8": "micro1 Frontier Engineering Challenge 2026",
     "contact.title": "Contact Me", "backTop": "Back to top",
     "contact.invite": "Have a project in mind? Send me an email and let's make it happen.",
     "contact.emailBtn": "Send an email", "contact.cvBtn": "Download CV",
@@ -144,7 +145,7 @@ const I18N = {
     "edu.0.t": "Ingeniería de Sistemas", "edu.1.t": "Tecnología en Medios Gráficos Audiovisuales",
     "tools.eyebrow": "HERRAMIENTAS Y HABILIDADES", "tools.languages": "Idiomas", "tools.spanish": "Español", "tools.english": "Inglés", "tools.korean": "Coreano", "tools.french": "Francés",
     "projects.eyebrow": "PROYECTOS DESTACADOS", "projects.title": "Trabajos seleccionados",
-    "exp.eyebrow": "TRAYECTORIA", "exp.title": "Experiencia",
+    "exp.eyebrow": "TRAYECTORIA", "exp.title": "Experiencia", "exp.ux": "Diseño UX/UI", "exp.llm": "LLM e IA", "exp.data": "Entrada de Datos", "exp.qa": "QA",
     "awards.eyebrow": "En el camino", "awards.title": "Reconocimientos",
     "awards.0": "Mención de Honor por Mejor Promedio — Facultad de Ingeniería de Sistemas (2025-1)",
     "awards.1": "Mención de Honor por Mejor Promedio — Facultad de Ingeniería de Sistemas (2025-2)",
@@ -154,6 +155,7 @@ const I18N = {
     "awards.5": "Cisco Networking Academy — Switching, Routing, and Wireless Essentials",
     "awards.6": "Mejor Asistente de Investigación en Realidad Virtual (2026)",
     "awards.7": "Próximamente",
+    "awards.8": "Desafío Frontier Engineering de micro1 2026",
     "contact.title": "Contáctame", "backTop": "Volver arriba",
     "contact.invite": "¿Tienes un proyecto en mente? Envíame un correo y hagámoslo realidad.",
     "contact.emailBtn": "Enviar un correo", "contact.cvBtn": "Descargar CV",
@@ -216,6 +218,7 @@ function applyLang(l) {
     if (I18N[l][key] !== undefined) el.innerHTML = I18N[l][key];
   });
   $("#langBtn").title = l === "en" ? "Cambiar a español" : "Switch to English";
+  if (typeof currentExpTab !== "undefined") renderTimeline(currentExpTab);
 }
 $("#langBtn").addEventListener("click", () => applyLang(lang === "en" ? "es" : "en"));
 applyLang(lang);
@@ -310,25 +313,31 @@ function initials(name) {
   return words.slice(0, 2).map(w => w[0].toUpperCase()).join("");
 }
 function renderTimeline(key) {
-  timeline.innerHTML = EXPERIENCE[key].map((x) => `
+  timeline.innerHTML = EXPERIENCE[key].map((x) => {
+    const role = lang === "es" ? (x.roleEs || x.role) : x.role;
+    const sub = lang === "es" ? (x.subEs || x.sub) : x.sub;
+    const org = lang === "es" ? (x.orgEs || x.org) : x.org;
+    const inst = lang === "es" ? (x.instEs || x.inst) : x.inst;
+    return `
     <div class="tl-item">
       <span class="tl-marker">
-        <span class="tl-logo">${x.logo ? `<img src="${x.logo}" alt="${x.org}" data-initials="${initials(x.org)}">` : `<b class="tl-initials">${initials(x.org)}</b>`}</span>
+        <span class="tl-logo">${x.logo ? `<img src="${x.logo}" alt="${org}" data-initials="${initials(org)}">` : `<b class="tl-initials">${initials(org)}</b>`}</span>
         <span class="tl-line"></span>
       </span>
       <div class="tl-card">
         <div class="tl-head">
           <div>
-            <div class="tl-role">${x.role}</div>
-            <div class="tl-sub">${x.sub}</div>
+            <div class="tl-role">${role}</div>
+            <div class="tl-sub">${sub}</div>
           </div>
           <span class="tl-date">${x.date}</span>
         </div>
-        <div class="tl-org">${x.org}<span>·</span>${x.inst}</div>
+        <div class="tl-org">${org}<span>·</span>${inst}</div>
         <div class="tl-tags">${x.tags.map((t) => `<span>${t}</span>`).join("")}</div>
         <span class="tl-dots" aria-hidden="true"></span>
       </div>
-    </div>`).join("");
+    </div>`;
+  }).join("");
 
   // logo not dropped in the folder yet → show the company initials instead
   $$(".tl-logo img", timeline).forEach((img) => {
@@ -337,9 +346,11 @@ function renderTimeline(key) {
     });
   });
 }
+let currentExpTab = "ux";
 $("#expTabs").addEventListener("click", (e) => {
   const t = e.target.closest(".tab");
   if (!t) return;
+  currentExpTab = t.dataset.tab;
   $$(".tab").forEach((b) => b.classList.toggle("active", b === t));
   renderTimeline(t.dataset.tab);
 });
