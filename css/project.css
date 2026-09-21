@@ -274,9 +274,9 @@ body.theme-usssello .hero-devices-slot img { top: -60px; right: -70px; width: 75
 body.theme-usssello .project-hero { padding-bottom: 220px; }
 body.theme-usssello .project-detail { padding-top: 160px; }
 
-body.theme-brush .hero-devices-slot img { top: -60px; right: -70px; width: 660px; }
-body.theme-brush .project-hero { padding-bottom: 220px; }
-body.theme-brush .project-detail { padding-top: 160px; }
+body.theme-brush .hero-devices-slot img { top: -60px; right: 0px; width: 760px; }
+body.theme-brush .project-hero { padding-bottom: 300px; }
+body.theme-brush .project-detail { padding-top: 180px; }
 
 body.theme-biofog .hero-devices-slot img { top: -60px; right: -70px; width: 660px; }
 body.theme-biofog .project-hero { padding-bottom: 220px; }
