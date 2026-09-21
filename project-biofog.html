@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BioFog Panel · Isabella Castro Camacho</title>
+  <meta name="description" content="BioFog Panel — outreach site for a fog water harvesting research project at Universidad de La Salle, built by Isabella Castro Camacho.">
+  <link rel="icon" href="assets/yo/isabella-cara.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/project.css">
+</head>
+<body id="top" class="theme-biofog">
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav-wrap">
+    <nav class="nav glass" aria-label="Main navigation">
+      <a href="index.html" class="brand">
+        <img src="assets/yo/isabella-cara.png" alt="Isabella Castro" class="brand-avatar">
+        <span>Portfolio</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#home" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About Me</a></li>
+        <li><a href="index.html#tools" data-i18n="nav.tools">Tools &amp; Skills</a></li>
+        <li><a href="index.html#projects" class="active" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="index.html#background" data-i18n="nav.background">Background</a></li>
+        <li><a href="index.html#awards" data-i18n="nav.awards">Awards</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="langBtn" aria-label="Change language" title="EN / ES">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
+        </button>
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode" title="Light / Dark">
+          <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </nav>
+    <!-- the mobile drawer lives outside <nav> on purpose: <nav> has the
+         .glass backdrop-filter, which creates a containing block for
+         position:fixed children, so a fixed drawer nested inside it would
+         get trapped inside the small pill instead of covering the screen -->
+    <ul class="nav-links nav-links--drawer" id="navLinksDrawer" aria-label="Main navigation">
+      <li><a href="index.html#home" data-i18n="nav.home">Home</a></li>
+      <li><a href="index.html#about" data-i18n="nav.about">About Me</a></li>
+      <li><a href="index.html#tools" data-i18n="nav.tools">Tools &amp; Skills</a></li>
+      <li><a href="index.html#projects" class="active" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="index.html#background" data-i18n="nav.background">Background</a></li>
+      <li><a href="index.html#awards" data-i18n="nav.awards">Awards</a></li>
+    </ul>
+    <div class="nav-backdrop" id="navBackdrop"></div>
+  </header>
+
+  <main>
+    <!-- ============ PROJECT HERO ============ -->
+    <section class="project-hero">
+      <div class="container">
+        <div class="project-hero-card">
+          <span class="hero-circle hero-circle-1" aria-hidden="true"></span>
+          <span class="hero-circle hero-circle-2" aria-hidden="true"></span>
+          <span class="hero-circle hero-circle-3" aria-hidden="true"></span>
+          <span class="hero-circle hero-circle-4" aria-hidden="true"></span>
+          <span class="hero-circle hero-circle-5" aria-hidden="true"></span>
+          <span class="hero-circle hero-circle-6" aria-hidden="true"></span>
+          <span class="hero-circle hero-circle-7" aria-hidden="true"></span>
+          <span class="hero-circle hero-circle-8" aria-hidden="true"></span>
+
+          <div class="project-hero-left">
+            <span class="dashboard-logo">BioFog Panel</span>
+            <p class="project-hero-tag" data-i18n="biofog.tag">Fog water harvesting · Universidad de La Salle</p>
+            <p class="project-hero-sub" data-i18n="biofog.sub">Outreach Site -<br>Research Project</p>
+          </div>
+
+          <!-- device composition: drop the image at assets/proyectos/biofog-devices.png
+               and it will appear automatically, bleeding past the bottom edge of the
+               card (mirrors the hero photo effect on the homepage, but downward). -->
+          <div class="hero-devices-slot img-slot">
+            <img class="devices-img" src="assets/proyectos/biofog-devices.png" alt="BioFog Panel shown across device mockups">
+            <span class="slot-hint">
+              Coloca aquí la imagen de los computadores<br>
+              <code>assets/proyectos/biofog-devices.png</code>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECT DETAIL ============ -->
+    <section class="project-detail">
+      <div class="container project-detail-grid">
+        <!-- single computer mockup: drop the image at assets/proyectos/biofog-mockup.png -->
+        <div class="project-mockup img-slot">
+          <img class="mockup-img" src="assets/proyectos/biofog-mockup.png" alt="BioFog Panel shown on a desktop computer">
+          <span class="slot-hint">
+            Coloca aquí la imagen del computador<br>
+            <code>assets/proyectos/biofog-mockup.png</code>
+          </span>
+        </div>
+
+        <!-- scrolling name banner — sibling of .project-info, absolutely
+             positioned so it never touches its layout -->
+        <div class="project-name-marquee" aria-hidden="true">
+          <div class="project-marquee">
+            <div class="project-marquee-track">
+              <span>BioFog</span><span>*</span>
+              <span>BioFog</span><span>*</span>
+              <span>BioFog</span><span>*</span>
+              <span>BioFog</span><span>*</span>
+              <span>BioFog</span><span>*</span>
+              <span>BioFog</span><span>*</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-info">
+          <span class="project-number">01</span>
+          <h2>BioFog Panel</h2>
+          <p class="project-desc" data-i18n="biofog.desc">
+            The outreach site for BioFog Panel, a research project at Universidad de La Salle. The prototype harvests water from fog through a biodegradable panel made of bamboo and banana pseudostem, with Arduino-connected sensors measuring humidity, temperature, wind and collected volume, alongside a predictive model that estimates water efficiency.<br><br>
+            The site presents the project to the public across seven sections: what it is, how the panel works, the process stages on video, an FAQ and the student team. Built as a single static page in plain HTML, CSS and JavaScript — no framework and no build step — with 24 hand-written inline SVG icons, 15 keyframe animations, and IntersectionObserver driving the scroll reveals.
+          </p>
+          <div class="project-info-footer">
+            <a class="btn btn-green" href="https://bio-fog.vercel.app/" target="_blank" rel="noopener">
+              <span data-i18n="project.viewBtn">Ver web</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <div class="project-badges">
+              <a class="project-figma-badge project-figma-badge--pulse" href="https://github.com/iCastro117/BioFog.git" target="_blank" rel="noopener" aria-label="Open the GitHub repository">
+                <img src="assets/tools/github.svg" alt="GitHub">
+                <span>GitHub</span>
+              </a>
+              <div class="project-figma-badge">
+                <img src="assets/tools/figma.svg" alt="Figma">
+                <span>Figma</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FONTS & COLORS ============ -->
+    <section class="project-palette">
+      <div class="container">
+        <h2 data-i18n="project.paletteTitle">Fonts &amp; Colors</h2>
+        <div class="palette-fonts">
+          <div class="font-card">
+            <span class="font-card-label" data-i18n="project.mainFont">Main font</span>
+            <strong class="font-name" style="font-family:'Montserrat',sans-serif;">Montserrat</strong>
+            <div class="font-row">
+              <span class="font-weight-label" data-i18n="project.bold">Bold</span>
+              <span class="font-aa font-aa--bold" style="font-family:'Montserrat',sans-serif;font-weight:800;">Aa</span>
+              <span class="font-alphabet font-alphabet--bold" style="font-family:'Montserrat',sans-serif;font-weight:700;">ABCDEFGHIJKLM<br>NOPQRSTUVWXYZ</span>
+            </div>
+          </div>
+          <div class="font-card">
+            <span class="font-card-label" data-i18n="project.secFonts">Secondary fonts</span>
+            <strong class="font-name">Inter</strong>
+            <div class="font-row">
+              <span class="font-weight-label" data-i18n="project.medium">Medium</span>
+              <span class="font-aa font-aa--medium">Aa</span>
+              <span class="font-alphabet font-alphabet--medium">ABCDEFGHIJKLM<br>NOPQRSTUVWXYZ</span>
+            </div>
+            <div class="font-row">
+              <span class="font-weight-label" data-i18n="project.regular">Regular</span>
+              <span class="font-aa font-aa--regular">Aa</span>
+              <span class="font-alphabet font-alphabet--regular">ABCDEFGHIJKLM<br>NOPQRSTUVWXYZ</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="palette-swatches">
+          <div class="swatch" style="--sw:#012E56"><span>#012E56</span></div>
+          <div class="swatch" style="--sw:#59AAAC"><span>#59AAAC</span></div>
+          <div class="swatch" style="--sw:#2BB5A8"><span>#2BB5A8</span></div>
+          <div class="swatch" style="--sw:#D5E8F3"><span>#D5E8F3</span></div>
+          <div class="swatch swatch--light" style="--sw:#FFFFFF"><span>#FFFFFF</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-card glass">
+          <a class="mail-ico" target="_blank" rel="noopener" aria-label="Send me an email"
+             href="https://mail.google.com/mail/?view=cm&fs=1&to=isabellacastrocamacho117@gmail.com&su=Hello%20Isabella%20%E2%80%94%20from%20your%20portfolio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </a>
+          <div class="contact-text">
+            <h3 data-i18n="contact.title">Contact Me</h3>
+            <p data-i18n="contact.invite">Have a project in mind? Send me an email and let's make it happen.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-blue" id="dmBtn" target="_blank" rel="noopener" data-i18n="contact.emailBtn"
+               href="https://mail.google.com/mail/?view=cm&fs=1&to=isabellacastrocamacho117@gmail.com&su=Hello%20Isabella%20%E2%80%94%20from%20your%20portfolio">Send an email</a>
+            <a class="btn btn-dark" href="assets/cv-isabella-castro.pdf" download>
+              <span data-i18n="contact.cvBtn">Download CV</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M4 19h16"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="back-top-wrap">
+      <a href="#top" class="back-top glass">
+        <span data-i18n="backTop">Back to top</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg>
+      </a>
+    </div>
+  </main>
+
+  <script src="js/project.js"></script>
+</body>
+</html>

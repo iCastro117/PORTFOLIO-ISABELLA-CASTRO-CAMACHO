@@ -5,7 +5,7 @@
 /* ---------- DATA (edit freely) ---------- */
 const TOOL = (name) => name === "wix" ? "assets/proyectos/wix.png" : `assets/tools/${name}.svg`;
 
-// 23 projects → 4 pages of 6. Tools per project are the real stack of each one.
+// 24 projects → 4 pages of 6. Tools per project are the real stack of each one.
 // Projects 8/9/10 and 13/14/15 were swapped (with their thumbnail images in
 // assets/proyectos/) per request; then Psychological Monitor (originally
 // #13) moved #8 → #11 → #13, swapping each time with whatever was there.
@@ -33,6 +33,7 @@ const PROJECT_TAGS = [
   ["photoshop"],
   ["indesign"],
   ["python", "json"],
+  ["html", "css", "javascript", "figma"],
 ];
 // projects with their own case-study page — everything else falls back to
 // the generic Grow placeholder title/link until it gets its own page too
@@ -60,6 +61,7 @@ const PROJECT_PAGES = {
   20: { title: "Photo Montage", titleEs: "Fotomontaje", link: "project-ecofarm.html" },
   21: { title: "Coffee Magazine Design", titleEs: "Diseño de Revista de Café", link: "project-coffeemag.html" },
   22: { title: "Brush, Agentic Design-to-Code Auditor", titleEs: "Brush, Auditor Agéntico de Diseño a Código", link: "project-brush.html" },
+  23: { title: "BioFog Panel, Fog Water Harvesting Research Site", titleEs: "BioFog Panel, Sitio del Proyecto de Captación de Agua de Niebla", link: "project-biofog.html" },
 };
 const PROJECT_SUB = { en: "E-commerce Web Site", es: "Sitio Web de Comercio Electrónico" };
 // rebuilt on every render (not just once) so it always reflects the

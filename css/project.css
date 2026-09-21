@@ -66,6 +66,7 @@ body.theme-photomontage { --brand-mid: #9CC3E0; --brand-dark: #5A6672; }
 body.theme-ecofarm { --brand-mid: #6FA85C; --brand-dark: #F0B429; }
 body.theme-coffeemag { --brand-mid: #A67153; --brand-dark: #0D0D0D; }
 body.theme-brush { --brand-mid: #7C3AED; --brand-dark: #2E1065; }
+body.theme-biofog { --brand-mid: #59AAAC; --brand-dark: #012E56; }
 
 .project-hero-card {
   position: relative; z-index: 2; overflow: visible; isolation: isolate;
@@ -276,6 +277,10 @@ body.theme-usssello .project-detail { padding-top: 160px; }
 body.theme-brush .hero-devices-slot img { top: -60px; right: -70px; width: 660px; }
 body.theme-brush .project-hero { padding-bottom: 220px; }
 body.theme-brush .project-detail { padding-top: 160px; }
+
+body.theme-biofog .hero-devices-slot img { top: -60px; right: -70px; width: 660px; }
+body.theme-biofog .project-hero { padding-bottom: 220px; }
+body.theme-biofog .project-detail { padding-top: 160px; }
 
 /* Literary Manager: its own hero layout — big heading + short text +
    3 access buttons (GitHub/WinRAR/PDF) on the left, and on the right a
@@ -790,8 +795,8 @@ body.theme-dashboard .font-alphabet { font-family: "Segoe UI", Tahoma, Geneva, s
   .project-detail { padding: 3.4rem 0 1rem; }
   /* la imagen se oculta en esta pantalla, así que el espacio extra
      "propio" de cada proyecto (ver arriba) tampoco hace falta aquí */
-  body.theme-grow .project-hero, body.theme-plant .project-hero, body.theme-dashboard .project-hero, body.theme-colombia .project-hero, body.theme-techxpress .project-hero, body.theme-coffeetour .project-hero, body.theme-expokonrad .project-hero, body.theme-psychmonitor .project-hero, body.theme-usssello .project-hero, body.theme-brush .project-hero { padding-bottom: 1rem; }
-  body.theme-grow .project-detail, body.theme-plant .project-detail, body.theme-dashboard .project-detail, body.theme-colombia .project-detail, body.theme-techxpress .project-detail, body.theme-coffeetour .project-detail, body.theme-expokonrad .project-detail, body.theme-psychmonitor .project-detail, body.theme-usssello .project-detail, body.theme-brush .project-detail { padding-top: 3.4rem; }
+  body.theme-grow .project-hero, body.theme-plant .project-hero, body.theme-dashboard .project-hero, body.theme-colombia .project-hero, body.theme-techxpress .project-hero, body.theme-coffeetour .project-hero, body.theme-expokonrad .project-hero, body.theme-psychmonitor .project-hero, body.theme-usssello .project-hero, body.theme-brush .project-hero, body.theme-biofog .project-hero { padding-bottom: 1rem; }
+  body.theme-grow .project-detail, body.theme-plant .project-detail, body.theme-dashboard .project-detail, body.theme-colombia .project-detail, body.theme-techxpress .project-detail, body.theme-coffeetour .project-detail, body.theme-expokonrad .project-detail, body.theme-psychmonitor .project-detail, body.theme-usssello .project-detail, body.theme-brush .project-detail, body.theme-biofog .project-detail { padding-top: 3.4rem; }
   .project-hero-card { padding: 2.6rem 2rem; overflow: hidden; }
   .project-hero-left { max-width: 100%; }
   /* selector as specific as ".hero-v2 .hero-devices-slot" (which sets
