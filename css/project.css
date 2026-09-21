@@ -278,9 +278,9 @@ body.theme-brush .hero-devices-slot img { top: -60px; right: 0px; width: 760px; 
 body.theme-brush .project-hero { padding-bottom: 300px; }
 body.theme-brush .project-detail { padding-top: 180px; }
 
-body.theme-biofog .hero-devices-slot img { top: -60px; right: -70px; width: 660px; }
-body.theme-biofog .project-hero { padding-bottom: 220px; }
-body.theme-biofog .project-detail { padding-top: 160px; }
+body.theme-biofog .hero-devices-slot img { top: -60px; right: 0px; width: 760px; }
+body.theme-biofog .project-hero { padding-bottom: 300px; }
+body.theme-biofog .project-detail { padding-top: 180px; }
 
 /* Literary Manager: its own hero layout — big heading + short text +
    3 access buttons (GitHub/WinRAR/PDF) on the left, and on the right a
