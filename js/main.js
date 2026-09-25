@@ -97,7 +97,7 @@ const EXPERIENCE = {
   ],
 };
 
-const AWARDS = Array.from({ length: 10 }, (_, i) => ({
+const AWARDS = Array.from({ length: 11 }, (_, i) => ({
   img: `assets/awards/award${i + 1}.png`,
   key: `awards.${i}`,                    // caption text lives in I18N, see below
 }));
@@ -131,6 +131,7 @@ const I18N = {
     "awards.7": "MICRO1 - Freelancer AI Trainer",
     "awards.8": "micro1 Frontier Engineering Challenge 2026",
     "awards.9": "Scrum Fundamentals Certified (SFC) — SCRUMstudy",
+    "awards.10": "Outstanding Participation — 31st Pacific Summer of Scientific and Technological Research, Delfín Program (2026)",
     "contact.title": "Contact Me", "backTop": "Back to top",
     "contact.invite": "Have a project in mind? Send me an email and let's make it happen.",
     "contact.emailBtn": "Send an email", "contact.cvBtn": "Download CV",
@@ -162,6 +163,7 @@ const I18N = {
     "awards.7": "Próximamente",
     "awards.8": "Desafío Frontier Engineering de micro1 2026",
     "awards.9": "Scrum Fundamentals Certified (SFC) — SCRUMstudy",
+    "awards.10": "Destacada Participación — 31° Verano de la Investigación Científica y Tecnológica del Pacífico, Programa Delfín (2026)",
     "contact.title": "Contáctame", "backTop": "Volver arriba",
     "contact.invite": "¿Tienes un proyecto en mente? Envíame un correo y hagámoslo realidad.",
     "contact.emailBtn": "Enviar un correo", "contact.cvBtn": "Descargar CV",
