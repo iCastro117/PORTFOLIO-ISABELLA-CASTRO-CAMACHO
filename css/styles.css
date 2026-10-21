@@ -519,6 +519,7 @@ h2 { font-size: clamp(1.6rem, 2.6vw, 2rem); font-weight: 700; margin-bottom: 1.4
 }
 .tl-org { font-size: .84rem; font-weight: 700; color: var(--blue-ink); margin-top: .55rem; }
 .tl-org span { color: var(--muted); font-weight: 500; margin: 0 .5rem; }
+.tl-desc { font-size: .86rem; line-height: 1.55; color: var(--text-soft); margin-top: .5rem; }
 .tl-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .7rem; }
 .tl-tags span {
   font-size: .7rem; font-weight: 600; color: var(--blue-deep);
