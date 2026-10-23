@@ -107,7 +107,7 @@ const I18N = {
   en: {
     "nav.home": "Home", "nav.about": "About Me", "nav.tools": "Tools & Skills", "nav.projects": "Projects", "nav.background": "Background", "nav.awards": "Awards",
     "hero.notHow": "It's not how", "hero.looks": "IT LOOKS", "hero.itsHow": "It's how", "hero.works": "IT WORKS",
-    "hero.desc": "AI Trainer and LLM evaluator with a Systems Engineering background. I compare model responses side by side — ChatGPT, Gemini, Claude — rating accuracy, reasoning, instruction following and safety, and flagging hallucinations with evidence.",
+    "hero.desc": "Systems Engineer and UX/UI Designer with hands-on experience in AI training, machine learning and LLM evaluation. I compare model responses side by side — ChatGPT, Gemini, Claude — rating accuracy, reasoning, instruction following and safety.",
     "hero.projectsBtn": "Projects", "hero.companies": "Companies", "hero.workedFor": "I have worked for.", "hero.profile": "Profile",
     "flip.turn": "Turn over to", "flip.share": "Share portfolio", "flip.download": "Download", "flip.scan": "Scan or share", "flip.copied": "Link copied!", "flip.back": "Turn back",
     "stats.years": "Years of<br>experience", "stats.certs": "Certifications", "stats.tools": "Tools",
@@ -140,7 +140,7 @@ const I18N = {
   es: {
     "nav.home": "Inicio", "nav.about": "Sobre mí", "nav.tools": "Herramientas", "nav.projects": "Proyectos", "nav.background": "Trayectoria", "nav.awards": "Reconocimientos",
     "hero.notHow": "No es cómo", "hero.looks": "SE VE", "hero.itsHow": "Es cómo", "hero.works": "FUNCIONA",
-    "hero.desc": "Entrenadora de IA y evaluadora de LLM con formación en Ingeniería de Sistemas. Comparo respuestas de modelos lado a lado — ChatGPT, Gemini, Claude — calificando precisión, razonamiento, seguimiento de instrucciones y seguridad, y detectando alucinaciones con evidencia.",
+    "hero.desc": "Ingeniera de Sistemas y Diseñadora UX/UI con experiencia práctica en entrenamiento de IA, machine learning y evaluación de LLM. Comparo respuestas de modelos lado a lado — ChatGPT, Gemini, Claude — calificando precisión, razonamiento, seguimiento de instrucciones y seguridad.",
     "hero.projectsBtn": "Proyectos", "hero.companies": "Empresas", "hero.workedFor": "con las que he trabajado.", "hero.profile": "Perfil",
     "flip.turn": "Gira para", "flip.share": "compartir el portafolio", "flip.download": "Descargar", "flip.scan": "Escanea o comparte", "flip.copied": "¡Enlace copiado!", "flip.back": "Volver",
     "stats.years": "Años de<br>experiencia", "stats.certs": "Certificaciones", "stats.tools": "Herramientas",
